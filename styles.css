@@ -311,6 +311,8 @@ section { position: relative; }
   0%, 100% { opacity: 1; transform: scale(1); }
   50% { opacity: 0.55; transform: scale(0.82); }
 }
+.hero__cta-mobile { display: none; }
+
 .hero__cta {
   position: absolute;
   bottom: 36px;
@@ -1420,20 +1422,29 @@ html.has-fcursor * { cursor: none !important; }
   .hero__quote { font-size: 16px; }
   .hero__years { font-size: 36px; }
   .hero__photo-wrap { width: 86vw; }
-  .hero__photo-wrap { padding-bottom: 130px; }
-  .hero__cta {
-    bottom: 16px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 24px);
+  .hero__cta { display: none; }
+  .hero__cta-mobile {
+    display: flex;
     flex-direction: column;
-    background: transparent;
-    backdrop-filter: none;
-    padding: 0;
-    gap: 10px;
+    gap: 12px;
+    width: 100%;
+    max-width: 340px;
+    margin: 20px auto 0;
   }
-  .btn-pill, .hero__cta-ghost { width: 100%; justify-content: center; text-align: center; }
-  .hero__cta-ghost { background: rgba(255,255,255,0.18); border-radius: 60px; backdrop-filter: blur(4px); }
+  .hero__cta-mobile .btn-pill { width: 100%; justify-content: center; }
+  .hero__cta-ghost--mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-ui);
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--text-800);
+    padding: 13px 26px;
+    border: 1px solid var(--text-400);
+    border-radius: 60px;
+    text-align: center;
+  }
 
   .services__title { font-size: clamp(28px, 8vw, 36px); }
   .service-card__title { font-size: 26px; padding: 32px 26px 0; }
