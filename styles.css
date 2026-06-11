@@ -1309,10 +1309,29 @@ html.has-fcursor * { cursor: none !important; }
   .services__grid { grid-template-columns: 1fr; max-width: 560px; margin-inline: auto; }
   .impact__inner { grid-template-columns: 1fr; }
   .impact__photo { max-width: 420px; margin-inline: auto; }
-  .timeline { grid-template-columns: 1fr; }
-  .timeline__rail { display: none; }
-  .timeline__roles, .timeline__focus { gap: 14px; }
-  .timeline__col { margin-bottom: 8px; }
+  .timeline {
+    grid-template-columns: 48px 1fr;
+    grid-template-rows: auto;
+    gap: 16px 20px;
+  }
+  .timeline__roles {
+    grid-column: 2;
+    grid-row: 1;
+    gap: 40px;
+  }
+  .timeline__rail {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: stretch;
+  }
+  .timeline__focus {
+    grid-column: 2;
+    grid-row: 2;
+    gap: 28px;
+  }
+  .timeline__col { margin-bottom: 0; }
   .project { flex: 0 0 100%; }
   .pd-results { grid-template-columns: repeat(3, 1fr); }
 }
@@ -1421,7 +1440,9 @@ html.has-fcursor * { cursor: none !important; }
   .hero__badge { font-size: 16px; padding: 8px 20px; }
   .hero__quote { font-size: 16px; }
   .hero__years { font-size: 36px; }
-  .hero__photo-wrap { width: 86vw; }
+  .hero__photo-wrap { width: 96vw; }
+  .hero__blob { width: 82%; }
+  .hero__photo { filter: drop-shadow(0 36px 56px rgba(40, 3, 87, 0.38)); }
   .hero__cta { display: none; }
   .hero__cta-mobile {
     display: flex;
