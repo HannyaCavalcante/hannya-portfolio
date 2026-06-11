@@ -33,16 +33,17 @@
 
     /* meta */
     const meta = [];
-    if (p.role) meta.push(["Função", p.role]);
-    if (p.date) meta.push(["Data", p.date]);
-    else if (p.year) meta.push(["Ano", p.year]);
-    if (p.duration) meta.push(["Contexto", p.duration]);
-    if (p.tools && p.tools.length) meta.push(["Ferramentas & métodos", p.tools.join(", ")]);
+    if (p.role) meta.push(["pd.meta.role", p.role]);
+    if (p.date) meta.push(["pd.meta.date", p.date]);
+    else if (p.year) meta.push(["pd.meta.year", p.year]);
+    if (p.duration) meta.push(["pd.meta.context", p.duration]);
+    if (p.tools && p.tools.length) meta.push(["pd.meta.tools", p.tools.join(", ")]);
     el("pdMeta").innerHTML = meta
       .map(function (m) {
-        return '<div class="pd-meta__item"><span class="pd-meta__k">' + m[0] + '</span><span class="pd-meta__v">' + m[1] + "</span></div>";
+        return '<div class="pd-meta__item"><span class="pd-meta__k" data-i18n="' + m[0] + '"></span><span class="pd-meta__v">' + m[1] + "</span></div>";
       })
       .join("");
+    if (window.HC_I18N) window.HC_I18N.apply(window.HC_I18N.getLang());
 
     /* cover */
     const cover = el("pdCover");

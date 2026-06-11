@@ -50,6 +50,11 @@
       "pd.err-title":     "Projeto não encontrado",
       "pd.err-text":      "Não conseguimos localizar este projeto.",
       "pd.err-cta":       "Voltar ao portfólio",
+      "pd.meta.role":     "Função",
+      "pd.meta.date":     "Data",
+      "pd.meta.year":     "Ano",
+      "pd.meta.context":  "Contexto",
+      "pd.meta.tools":    "Ferramentas & métodos",
     },
     en: {
       "nav.services":     "Services",
@@ -96,6 +101,11 @@
       "pd.err-title":     "Project not found",
       "pd.err-text":      "We couldn't find this project.",
       "pd.err-cta":       "Back to portfolio",
+      "pd.meta.role":     "Role",
+      "pd.meta.date":     "Date",
+      "pd.meta.year":     "Year",
+      "pd.meta.context":  "Context",
+      "pd.meta.tools":    "Tools & methods",
     },
   };
 
@@ -157,5 +167,5 @@
     });
   });
 
-  window.HC_I18N = { toggle: toggle, getLang: getLang };
+  window.HC_I18N = { toggle: toggle, getLang: getLang, apply: applyLang };
 })();
