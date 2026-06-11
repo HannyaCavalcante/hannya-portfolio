@@ -17,14 +17,19 @@
   <a class="nav__brand-mobile" href="#home" aria-label="Início">HC</a>
   <div class="nav__links" id="navLinks">
     <a class="nav__link is-active" href="#home" data-link>Home</a>
-    <a class="nav__link" href="#servicos" data-link>Serviços</a>
+    <a class="nav__link" href="#servicos" data-link data-i18n="nav.services">Serviços</a>
     <a class="nav__logo" href="#home" aria-label="Hannya Cavalcante">HC</a>
-    <a class="nav__link" href="#projetos" data-link>Projetos</a>
-    <a class="nav__link" href="#contato" data-link>Contato</a>
+    <a class="nav__link" href="#projetos" data-link data-i18n="nav.projects">Projetos</a>
+    <a class="nav__link" href="#contato" data-link data-i18n="nav.contact">Contato</a>
   </div>
   <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema" data-cursor>
     <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
     <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+  </button>
+  <button class="lang-toggle" id="langToggle" aria-label="Switch to English" data-cursor>
+    <span class="lang-pt is-active">PT</span>
+    <span class="lang-sep">|</span>
+    <span class="lang-en">EN</span>
   </button>
   <button class="nav__burger" id="burger" aria-label="Menu">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -35,26 +40,26 @@
 
   <!-- ============ HERO ============ -->
   <header class="hero container" id="home" data-screen-label="Hero">
-    <span class="hero__badge reveal">Olá!</span>
-    <h1 class="hero__title reveal" data-delay="1" style="font-weight: 900">Eu sou Hannya,<br /><span class="br-accent">UX | UI Designer</span></h1>
+    <span class="hero__badge reveal" data-i18n="hero.badge">Olá!</span>
+    <h1 class="hero__title reveal" data-delay="1" style="font-weight: 900" data-i18n-html="hero.title">Eu sou Hannya,<br /><span class="br-accent">UX | UI Designer</span></h1>
 
     <!-- botões visíveis apenas no mobile, abaixo do título -->
     <div class="hero__cta-mobile">
-      <a class="btn-pill" href="mailto:hannyacavalcante@hotmail.com" data-cursor style="font-size: 17px; padding: 13px 26px;">Entre em contato</a>
+      <a class="btn-pill" href="mailto:hannyacavalcante@hotmail.com" data-cursor style="font-size: 17px; padding: 13px 26px;" data-i18n="hero.cta">Entre em contato</a>
       <a class="hero__cta-ghost hero__cta-ghost--mobile" href="#contato" data-link data-cursor>Hire me</a>
     </div>
 
     <div class="hero__stage">
       <aside class="hero__aside reveal" data-delay="2">
         <div class="hero__quote-mark">&#10078;</div>
-        <p class="hero__quote">Designer de UX/UI especializada em criar interfaces intuitivas e estratégias de CRM. Com experiência em mais de 30 segmentos de mercado, ajudo empresas a transformarem a jornada de seus usuários em resultados reais.</p>
+        <p class="hero__quote" data-i18n="hero.quote">Designer de UX/UI especializada em criar interfaces intuitivas e estratégias de CRM. Com experiência em mais de 30 segmentos de mercado, ajudo empresas a transformarem a jornada de seus usuários em resultados reais.</p>
       </aside>
 
       <div class="hero__photo-wrap reveal" data-delay="1">
         <div class="hero__blob"></div>
         <img class="hero__photo" src="assets/hannya-hero.png" alt="Hannya Cavalcante" />
         <div class="hero__cta">
-          <a class="btn-pill" href="mailto:hannyacavalcante@hotmail.com" data-cursor style="font-size: 17px; padding: 13px 26px;">
+          <a class="btn-pill" href="mailto:hannyacavalcante@hotmail.com" data-cursor style="font-size: 17px; padding: 13px 26px;" data-i18n="hero.cta">
             Entre em contato
           </a>
           <a class="hero__cta-ghost" href="#contato" data-link data-cursor>Hire me</a>
@@ -69,8 +74,8 @@
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.3 6.9.6-5.2 4.6 1.6 6.7L12 17.3 5.8 20.8l1.6-6.7L2.2 8.9l6.9-.6z"/></svg>
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.3 6.9.6-5.2 4.6 1.6 6.7L12 17.3 5.8 20.8l1.6-6.7L2.2 8.9l6.9-.6z"/></svg>
         </div>
-        <div class="hero__years">6 Anos</div>
-        <div class="hero__years-sub">de experiência</div>
+        <div class="hero__years" data-i18n="hero.years">6 Anos</div>
+        <div class="hero__years-sub" data-i18n="hero.years-sub">de experiência</div>
       </aside>
     </div>
   </header>
@@ -78,8 +83,8 @@
   <!-- ============ SERVIÇOS ============ -->
   <section class="services section-pad container" id="servicos" data-screen-label="Serviços">
     <div class="services__head">
-      <h2 class="services__title reveal reveal--left">Meus Serviços</h2>
-      <p class="services__desc reveal reveal--right" data-delay="1">Criação de interfaces digitais centradas no usuário, focando em usabilidade, arquitetura de informação e prototipação de alta fidelidade, modernas e responsivas utilizando HTML, CSS e JavaScript, garantindo que o design seja fiel à implementação.</p>
+      <h2 class="services__title reveal reveal--left" data-i18n="services.title">Meus Serviços</h2>
+      <p class="services__desc reveal reveal--right" data-delay="1" data-i18n="services.desc">Criação de interfaces digitais centradas no usuário, focando em usabilidade, arquitetura de informação e prototipação de alta fidelidade, modernas e responsivas utilizando HTML, CSS e JavaScript, garantindo que o design seja fiel à implementação.</p>
     </div>
 
     <div class="services__grid">
@@ -120,13 +125,13 @@
 
   <!-- ============ EXPERIÊNCIA ============ -->
   <section class="exp section-pad container" data-screen-label="Experiência">
-    <h2 class="exp__title reveal">Minha Experiência Profissional</h2>
+    <h2 class="exp__title reveal" data-i18n="exp.title">Minha Experiência Profissional</h2>
 
     <div class="timeline">
       <div class="timeline__col timeline__roles">
-        <div class="role-title reveal">Implementação de<br />CRM &amp; UX Design</div>
+        <div class="role-title reveal" data-i18n-html="exp.role1">Implementação de<br />CRM &amp; UX Design</div>
         <div class="role-title reveal" data-delay="1">UX/UI &amp; Digital</div>
-        <div class="role-title reveal" data-delay="2">Designer Gráfico &amp;<br />de Interfaces</div>
+        <div class="role-title reveal" data-delay="2" data-i18n-html="exp.role3">Designer Gráfico &amp;<br />de Interfaces</div>
       </div>
 
       <div class="timeline__rail">
@@ -136,9 +141,9 @@
       </div>
 
       <div class="timeline__col timeline__focus">
-        <p class="focus-text reveal">Foco: Atuação estratégica no time de experiência do usuário, adaptando clientes à plataforma e criando fluxos de trabalho que aumentam a eficiência e a usabilidade do sistema.</p>
-        <p class="focus-text reveal" data-delay="1">Foco: Projetos de interfaces para diversos segmentos, desde a pesquisa de usuário (UX Research) até o design visual e construção de Design Systems.</p>
-        <p class="focus-text reveal" data-delay="2">Foco: Desenvolvimento de identidades visuais e soluções gráficas com foco em comunicação estratégica e experiência de marca.</p>
+        <p class="focus-text reveal" data-i18n="exp.focus1">Foco: Atuação estratégica no time de experiência do usuário, adaptando clientes à plataforma e criando fluxos de trabalho que aumentam a eficiência e a usabilidade do sistema.</p>
+        <p class="focus-text reveal" data-delay="1" data-i18n="exp.focus2">Foco: Projetos de interfaces para diversos segmentos, desde a pesquisa de usuário (UX Research) até o design visual e construção de Design Systems.</p>
+        <p class="focus-text reveal" data-delay="2" data-i18n="exp.focus3">Foco: Desenvolvimento de identidades visuais e soluções gráficas com foco em comunicação estratégica e experiência de marca.</p>
       </div>
     </div>
   </section>
@@ -150,26 +155,26 @@
         <img src="assets/hannya-about.png" alt="Hannya Cavalcante" />
       </div>
       <div class="reveal reveal--right" data-delay="1">
-        <h2 class="impact__title">Vamos falar sobre impacto e experiência?</h2>
-        <p class="impact__text">Com uma base sólida em Design Gráfico e especialização em UX/UI pela EBAC, trago um olhar equilibrado entre estética e funcionalidade. Atualmente cursando Web Design na FIAP, busco a integração perfeita entre design e desenvolvimento. Meu foco é resolver problemas reais através da empatia, acessibilidade e visão estratégica.</p>
+        <h2 class="impact__title" data-i18n="impact.title">Vamos falar sobre impacto e experiência?</h2>
+        <p class="impact__text" data-i18n="impact.text">Com uma base sólida em Design Gráfico e especialização em UX/UI pela EBAC, trago um olhar equilibrado entre estética e funcionalidade. Atualmente cursando Web Design na FIAP, busco a integração perfeita entre design e desenvolvimento. Meu foco é resolver problemas reais através da empatia, acessibilidade e visão estratégica.</p>
         <div class="impact__stats">
           <div class="stat">
-            <div class="stat__num"><span data-count="6" data-suffix=" Anos">0 Anos</span></div>
-            <div class="stat__label">de experiência no mercado</div>
+            <div class="stat__num"><span data-count="6" data-suffix=" Anos" data-i18n-suffix="impact.stat1-sfx">0 Anos</span></div>
+            <div class="stat__label" data-i18n="impact.stat1-lbl">de experiência no mercado</div>
           </div>
           <div class="stat">
-            <div class="stat__num"><span data-count="30" data-prefix="+" data-suffix=" clientes">+0 clientes</span></div>
-            <div class="stat__label">categorias e segmentos de mercado</div>
+            <div class="stat__num"><span data-count="30" data-prefix="+" data-suffix=" clientes" data-i18n-suffix="impact.stat2-sfx">+0 clientes</span></div>
+            <div class="stat__label" data-i18n="impact.stat2-lbl">categorias e segmentos de mercado</div>
           </div>
         </div>
-        <a class="btn-outline" href="#contato" data-link data-cursor>Entre em contato</a>
+        <a class="btn-outline" href="#contato" data-link data-cursor data-i18n="impact.cta">Entre em contato</a>
       </div>
     </div>
   </section>
 
   <!-- ============ PORTFÓLIO ============ -->
   <section class="portfolio section-pad container" id="projetos" data-screen-label="Portfólio">
-    <h2 class="portfolio__title reveal reveal--blur">Portfólio em Destaque</h2>
+    <h2 class="portfolio__title reveal reveal--blur" data-i18n="portfolio.title">Portfólio em Destaque</h2>
 
     <div class="carousel reveal" data-delay="1">
       <div class="carousel__track" id="projectTrack"></div>
@@ -189,7 +194,7 @@
       <span class="chip">Web Design</span>
       <span class="chip">Front-End</span>
       <span class="chip">CRM Strategy</span>
-      <span class="chip">Prototipagem</span>
+      <span class="chip" data-i18n="chip.proto">Prototipagem</span>
     </div>
   </section>
 
@@ -200,17 +205,17 @@
 
   <!-- ============ CONTATO ============ -->
   <section class="contact section-pad container" id="contato" data-screen-label="Contato">
-    <h2 class="contact__title reveal">Tem uma ideia de projeto inovador? Vamos conversar.</h2>
+    <h2 class="contact__title reveal" data-i18n="contact.title">Tem uma ideia de projeto inovador? Vamos conversar.</h2>
     <form class="contact__form reveal" data-delay="1" id="contactForm">
       <span class="contact__icon">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.5L4.5 7.2v.3L12 13l7.5-5.5v-.3L12 12.5z"/></svg>
       </span>
-      <input class="contact__input" type="email" id="contactEmail" placeholder="Digite seu e-mail para iniciar a conversa" required />
-      <button class="btn-send" type="submit" data-cursor>Enviar</button>
+      <input class="contact__input" type="email" id="contactEmail" placeholder="Digite seu e-mail para iniciar a conversa" data-i18n-placeholder="contact.ph" required />
+      <button class="btn-send" type="submit" data-cursor data-i18n="contact.send">Enviar</button>
     </form>
     <div class="contact__badge">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3zm-1 13-3-3 1.4-1.4L11 12.2l4.6-4.6L17 9l-6 6z"/></svg>
-      UX/UI Designer Certificada — EBAC
+      <span data-i18n="contact.badge">UX/UI Designer Certificada — EBAC</span>
     </div>
   </section>
 
@@ -227,7 +232,7 @@
         </a>
       </div>
     </div>
-    <p class="footer__copy">© <span id="year"></span> Hannya Cavalcante. Todos os direitos reservados.</p>
+    <p class="footer__copy">© <span id="year"></span> Hannya Cavalcante. <span data-i18n="footer.copy">Todos os direitos reservados.</span></p>
   </footer>
 
 </main>
@@ -244,6 +249,7 @@
 <!-- Tweaks panel -->
 <div id="tweaks-root"></div>
 
+<script src="i18n.js"></script>
 <script src="projects-data.js"></script>
 <script src="script.js"></script>
 
