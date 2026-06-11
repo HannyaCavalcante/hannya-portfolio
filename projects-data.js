@@ -1,0 +1,198 @@
+/* ============================================================
+   Dados dos projetos — compartilhado entre index e páginas de detalhe
+   Edite/adicione informações de cada projeto aqui.
+   ============================================================ */
+window.PROJECTS_DATA = [
+  {
+    id: "casa-vira-lata",
+    name: "Casa do Vira-Lata",
+    category: "UX/UI · Causa Animal",
+    desc: "Projeto voltado à causa animal, com foco em criar uma experiência digital acolhedora e intuitiva para incentivar adoções, doações e conexão entre pessoas e animais resgatados.",
+    variant: "image",
+    image: "assets/service-1.png",
+    cover: "assets/service-1.png",
+    hideName: true,
+    year: "2024",
+    role: "UX/UI Designer",
+    duration: "6 semanas",
+    tools: ["Figma", "FigJam", "Maze"],
+    link: "https://www.figma.com/proto/ZX35nmTU375zOKbmBkCJr9/Casa-do-Vira-lata?node-id=12-58&page-id=0%3A1&starting-point-node-id=12%3A58&t=xYQrVvXiYkMx2VDO-1",
+    linkLabel: "Ver protótipo no Figma",
+    link2: "https://www.behance.net/gallery/250012117/Casa-do-Vira-Lata-Ux-Case",
+    link2Label: "Ver estudo no Behance",
+    overview:
+      "A Casa do Vira-Lata é uma plataforma que conecta protetores independentes e ONGs a pessoas dispostas a adotar ou doar. O objetivo foi transformar um processo geralmente burocrático e fragmentado em uma jornada acolhedora, transparente e fácil de seguir.",
+    challenge:
+      "Adoções esbarravam em formulários longos, falta de informação sobre os animais e pouca confiança entre as partes. Era preciso reduzir a fricção sem perder o cuidado necessário com cada adoção.",
+    solution:
+      "Criei fluxos curtos e guiados, perfis ricos dos animais com fotos e histórico de saúde, e um sistema de mensagens direto entre adotante e protetor. A identidade visual usa tons quentes e ilustrações leves para transmitir acolhimento.",
+    results: [
+      { num: "+40%", label: "intenção de adoção em testes de usabilidade" },
+      { num: "3 cliques", label: "para iniciar um pedido de adoção" },
+      { num: "9/10", label: "nota média de satisfação no protótipo" },
+    ],
+    gallery: ["assets/service-1.png"],
+  },
+  {
+    id: "itau",
+    name: "Itaú UX | UI",
+    category: "UX/UI · Setor Bancário",
+    desc: "Projeto desenvolvido com foco em experiência do usuário para o setor bancário, explorando interfaces modernas, acessibilidade e soluções intuitivas para facilitar a jornada digital dos clientes.",
+    variant: "image",
+    image: "assets/thumb-itau.jpg",
+    cover: "assets/thumb-itau.jpg",
+    hideName: true,
+    year: "2025",
+    role: "UX/UI Designer",
+    duration: "Junho de 2023 – Março de 2025",
+    tools: ["Figma", "Design System", "Stark"],
+    link: "https://www.behance.net/gallery/221760505/UX-UI-Case-Itau-EBAC",
+    linkLabel: "Ver no Behance",
+    overview:
+      "Reimaginação de fluxos do aplicativo bancário com foco em clareza, confiança e acessibilidade. O projeto explorou desde a hierarquia de informação até estados de erro e feedback em tempo real.",
+    challenge:
+      "Telas densas, com muita informação competindo por atenção, dificultavam tarefas simples como transferências e consultas. A acessibilidade também precisava de atenção (contraste, alvos de toque, leitores de tela).",
+    solution:
+      "Defini uma hierarquia visual consistente, componentes reaproveitáveis em um mini design system e padrões de acessibilidade WCAG. Os fluxos principais foram simplificados em etapas claras com confirmação e feedback.",
+    results: [
+      { num: "AA", label: "conformidade de contraste WCAG" },
+      { num: "-30%", label: "etapas em fluxos críticos" },
+      { num: "100%", label: "componentes documentados no DS" },
+    ],
+    gallery: ["assets/thumb-itau.jpg"],
+  },
+  {
+    id: "tasker",
+    name: "Tasker",
+    category: "Product Design · Produtividade",
+    desc: "Aplicativo com interações gamificadas criado para ajudar jovens com dificuldades de concentração a organizarem tarefas, desenvolverem hábitos e aumentarem a produtividade no dia a dia.",
+    variant: "image",
+    image: "assets/tasker-cover.webp",
+    cover: "assets/tasker-cover.webp",
+    hideName: true,
+    year: "2025",
+    date: "9 de janeiro de 2025",
+    context: "Este projeto foi desenvolvido como parte do curso de UX|UI da EBAC, sendo um projeto independente criado para aplicar e testar meus conhecimentos na área.",
+    role: "UX/UI Designer",
+    duration: "Projeto de conclusão · EBAC",
+    tools: ["Figma", "Google Forms", "Double Diamond", "WCAG"],
+    link: "https://medium.com/@hannyacavalcantestyles/ux-ui-estudo-de-caso-tasker-a-revolu%C3%A7%C3%A3o-gamificada-na-organiza%C3%A7%C3%A3o-e-produtividade-9caef47f25f5",
+    linkLabel: "Ler estudo de caso",
+    link2: "https://www.figma.com/proto/VHyxRWUBey1X44ZlYbEbZx/Tasker?node-id=64-3632&t=IptudAdtO20ZFk6D-1",
+    link2Label: "Ver protótipo no Figma",
+    overview:
+      "O Tasker nasce em um mundo saturado de telas e estímulos rápidos, onde manter o foco virou um desafio real. É uma ferramenta pensada para ajudar jovens a recuperar o controle do seu tempo, organizando tarefas de forma gamificada e motivadora — incentivando o trabalho colaborativo entre equipes e promovendo foco e produtividade.",
+    challenge:
+      "O excesso de vídeos curtos e estímulos digitais alimenta um ciclo contínuo de distração que impacta o desempenho acadêmico e profissional — agravado pela pandemia e associado a ansiedade, fadiga e sobrecarga. Apps de tarefas tradicionais costumam ser punitivos e fáceis de abandonar; era preciso manter o engajamento sem gerar mais ansiedade.",
+    solution:
+      "Apliquei a metodologia Double Diamond (descoberta, definição, desenvolvimento e entrega). Construí persona, mapa de empatia, matriz CSD e benchmarking (TickTick, Notion, Todoist, GoodNotes e Plantie), além de pesquisa quantitativa via Google Forms e entrevistas. A partir dos testes de usabilidade em baixa fidelidade, evoluí para uma identidade visual colaborativa e um protótipo navegável de alta fidelidade no Figma — tudo com foco em acessibilidade (WCAG) e na tipografia Palanquin para leitura clara.",
+    results: [
+      { num: "Double Diamond", label: "metodologia de UX aplicada de ponta a ponta" },
+      { num: "5 apps", label: "analisados em benchmarking de produtividade" },
+      { num: "WCAG", label: "acessibilidade: contraste adequado e tipografia legível" },
+    ],
+    gallery: ["assets/tasker-screens.webp"],
+  },
+  {
+    id: "reuse",
+    name: "Reuse App",
+    category: "UX/UI · Economia Circular",
+    desc: "Plataforma digital colaborativa de economia circular — um marketplace onde pessoas vendem, trocam e doam produtos usados, incentivando o consumo consciente e a sustentabilidade urbana.",
+    variant: "green",
+    logo: "assets/reuse-logo.svg",
+    coverBanner: true,
+    coverBg: "#0E0E0E",
+    year: "2025",
+    date: "2025 – 2026",
+    context: "Projeto desenvolvido na FIAP, em equipe — unindo design, desenvolvimento full stack e estratégia.",
+    role: "UX/UI · Mobile · Fases 1–3",
+    duration: "FIAP · Projeto em equipe",
+    tools: ["Next.js 14", "TypeScript", "Tailwind", "Prisma", "PostgreSQL", "React Native"],
+    link: "https://reuse-web-jhfm.vercel.app/",
+    linkLabel: "Acessar plataforma",
+    link2: "https://github.com/1TWDOR-11/reuse-web",
+    link2Label: "Ver no GitHub",
+    team: [
+      { name: "Hannya", role: "UX/UI, Mobile, FullStack & Deploy", link: "https://www.linkedin.com/in/hannyacavalcante/" },
+      { name: "Gabriel", role: "UX e UI", link: "https://www.linkedin.com/in/oliveiragab/" },
+      { name: "Mari", role: "Marketing, UX, FullStack", link: "https://www.linkedin.com/in/mariana-nikaido/" },
+    ],
+    overview:
+      "A ReUse é um marketplace de economia circular onde é possível vender, trocar e doar produtos usados. A plataforma combina listagem por categorias, perfis de usuário avaliados, chat de negociação e uma camada de gamificação que transforma o consumo consciente numa experiência envolvente.",
+    challenge:
+      "Muitos itens ficam parados em casa sem uso, gerando desperdício e descarte desnecessário — e faltava no Brasil uma plataforma realmente focada em sustentabilidade. O desafio era criar uma experiência que tornasse trocar, vender e doar tão fácil e recompensador quanto comprar novo.",
+    solution:
+      "Desenhei um fluxo completo: listagem com filtro por categoria e busca que ignora acentos, página de detalhe com 3 tipos de oferta (venda, troca ou doação) e status do anúncio. No perfil, avatar, bio, avaliação por estrelas e badges; em 'Meus Anúncios', métricas de visualizações, favoritos e mensagens. A gamificação tem sistema de XP, 8 níveis progressivos, 8 conquistas desbloqueáveis e toasts animados em tempo real, além de chat flutuante para negociação e acompanhamento de pedidos (Aguardando → Em Trânsito → Entregue).",
+    results: [
+      { num: "XP + 8 níveis", label: "gamificação com conquistas desbloqueáveis" },
+      { num: "3 tipos de oferta", label: "venda, troca ou doação no mesmo fluxo" },
+      { num: "Full stack", label: "Next.js, Prisma e PostgreSQL no ar na Vercel" },
+    ],
+    gallery: [],
+  },
+  {
+    id: "flui",
+    name: "Flui",
+    category: "UX/UI · Mobilidade Elétrica",
+    desc: "Plataforma voltada ao universo de carros elétricos: encontre postos de carregamento, avalie estações, compartilhe experiências e acesse informações úteis sobre mobilidade elétrica em um só lugar.",
+    variant: "dark",
+    cover: "assets/flui-banner.svg",
+    hideName: true,
+    year: "2026",
+    role: "UX/UI Designer",
+    duration: "Projeto em equipe",
+    tools: ["Figma", "Maps API", "Maze"],
+    link: "https://mahnikaido.github.io/flui-charge-platform/mobile.html",
+    linkLabel: "Acessar protótipo",
+    team: [
+      { name: "Hannya", role: "UX/UI Designer", link: "https://www.linkedin.com/in/hannyacavalcante/" },
+      { name: "Gabriel", role: "UX e UI", link: "https://www.linkedin.com/in/oliveiragab/" },
+      { name: "Mari", role: "Marketing, UX", link: "https://www.linkedin.com/in/mariana-nikaido/" },
+    ],
+    overview:
+      "Flui reúne tudo que um motorista de carro elétrico precisa: localização de estações em tempo real, avaliações da comunidade e informações úteis sobre rotas e mobilidade elétrica.",
+    challenge:
+      "Informações sobre carregamento são dispersas e pouco confiáveis. Motoristas precisam decidir rápido onde e quando carregar, muitas vezes em movimento.",
+    solution:
+      "Mapa em tempo real com status de disponibilidade, filtros por tipo de conector e velocidade, avaliações da comunidade e planejamento de rota. Interface escura e de alto contraste, pensada para uso no carro.",
+    results: [
+      { num: "tempo real", label: "status de disponibilidade das estações" },
+      { num: "-25%", label: "tempo para encontrar um posto" },
+      { num: "7/10", label: "confiança nas informações da comunidade" },
+    ],
+    gallery: [],
+  },
+  {
+    id: "orbit",
+    name: "Orbit",
+    category: "Global Solution",
+    desc: "Projeto em desenvolvimento — em breve mais informações.",
+    variant: "purple",
+    soon: true,
+    year: "2026",
+  },
+  {
+    id: "evorun",
+    name: "Evorun",
+    category: "Global Solution",
+    desc: "Projeto em desenvolvimento — em breve mais informações.",
+    variant: "dark",
+    soon: true,
+    year: "2026",
+  },
+  {
+    id: "auren",
+    name: "Auren",
+    category: "Controle Financeiro",
+    desc: "Projeto em desenvolvimento — em breve mais informações.",
+    variant: "green",
+    soon: true,
+    year: "2026",
+  },
+];
+
+window.VARIANT_BG = {
+  purple: "linear-gradient(150deg, #9747FF, #5B2A9E)",
+  green: "linear-gradient(150deg, #1F8A5B, #0E4F33)",
+  dark: "linear-gradient(150deg, #2C2150, #120026)",
+};
