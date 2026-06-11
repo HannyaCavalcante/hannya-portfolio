@@ -142,7 +142,7 @@ window.PROJECTS_DATA = [
     role: "UX/UI Designer",
     duration: "Projeto em equipe",
     tools: ["Figma", "Maps API", "Maze"],
-    link: "https://mahnikaido.github.io/flui-charge-platform/mobile.html",
+    link: "https://flui-charge.vercel.app/",
     linkLabel: "Acessar protótipo",
     team: [
       { name: "Hannya", role: "UX/UI Designer", link: "https://www.linkedin.com/in/hannyacavalcante/" },
