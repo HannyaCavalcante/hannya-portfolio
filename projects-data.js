@@ -165,11 +165,38 @@ window.PROJECTS_DATA = [
   {
     id: "orbit",
     name: "Orbit",
-    category: "Global Solution",
-    desc: "Projeto em desenvolvimento — em breve mais informações.",
-    variant: "purple",
-    soon: true,
+    category: "Product Design · Missão Espacial",
+    desc: "Sistema de controle de missão espacial que simula a comunicação e gestão operacional de uma tripulação em Marte, com latência real Terra-Marte e painel de monitoramento em tempo real.",
+    variant: "dark",
     year: "2026",
+    date: "2026",
+    context: "Desenvolvido para a FIAP Global Solution 2026, com o objetivo de resolver um dos maiores desafios da exploração espacial: a latência de comunicação entre a Terra e Marte (3 a 22 minutos, dependendo do alinhamento orbital).",
+    role: "Product Design & FullStack",
+    duration: "FIAP Global Solution 2026",
+    tools: ["React", "Node.js", "API REST", "JWT", "Railway", "Vercel"],
+    link: "https://orbit-mission-control-one.vercel.app",
+    linkLabel: "Acessar demo",
+    link2: "https://github.com/HannyaCavalcante/orbit-mission-control",
+    link2Label: "Ver no GitHub",
+    link3: "https://youtu.be/c1wgYZBouTA",
+    link3Label: "Assistir no YouTube",
+    team: [
+      { name: "Hannya", role: "Product Design & FullStack", link: "https://www.linkedin.com/in/hannyacavalcante/" },
+      { name: "Mariana Nikaido", role: "UX & Visão Estratégica", link: "https://www.linkedin.com/in/mariana-nikaido/" },
+      { name: "Gabriel Oliveira", role: "UI & UX Centrada no Usuário", link: "https://www.linkedin.com/in/oliveiragab/" },
+    ],
+    overview:
+      "ORBIT é um sistema de controle de missão espacial que simula a comunicação e gestão operacional de uma tripulação em Marte. O projeto foi criado para a FIAP Global Solution 2026 com o objetivo de resolver um dos maiores desafios da exploração espacial: a latência de comunicação entre a Terra e Marte, que varia de 3 a 22 minutos dependendo do alinhamento orbital.",
+    challenge:
+      "A comunicação em tempo real é impossível em missões interplanetárias. Uma tripulação em Marte precisa de um sistema autônomo capaz de registrar alertas críticos, gerenciar tarefas, monitorar os vitais da equipe e se comunicar com a Terra levando em conta o delay real das transmissões de rádio. Nenhuma solução comercial existente simula essa realidade com fidelidade técnica.",
+    solution:
+      "Desenvolvemos uma plataforma web completa com painel de controle em tempo real simulando o ambiente operacional de uma missão marciana: dashboard com status de tripulação, alertas ativos, tarefas abertas e delay atual Terra-Marte; sistema de mensagens com latência simulada (representando o delay de até 22 min); gerenciamento de tarefas em kanban (A fazer / Em andamento / Concluído); alertas críticos categorizados por severidade; log de missão cronológico; contador de Sol marciano (ciclo de 88.620 segundos); e mecânica orbital real para cálculo da distância Terra-Marte (56M a 401M km).",
+    results: [
+      { num: "JWT", label: "autenticação com rotas protegidas e modo demo ativo" },
+      { num: "56M–401M km", label: "mecânica orbital real para distância Terra-Marte" },
+      { num: "Full stack", label: "deploy contínuo via Vercel (frontend) e Railway (backend)" },
+    ],
+    gallery: [],
   },
   {
     id: "evorun",

@@ -130,6 +130,22 @@
       }
     }
 
+    /* terceiro link (ex.: YouTube) */
+    var link3Btn = el("pdLink3");
+    if (link3Btn) {
+      if (p.link3) {
+        link3Btn.href = p.link3;
+        var label3 = p.link3Label || "Ver vídeo";
+        var svg3 = link3Btn.querySelector("svg");
+        link3Btn.textContent = label3 + " ";
+        if (svg3) link3Btn.appendChild(svg3);
+        link3Btn.setAttribute("data-cursor-label", label3.replace("Assistir no ", ""));
+        link3Btn.hidden = false;
+      } else {
+        link3Btn.hidden = true;
+      }
+    }
+
     /* próximo projeto */
     const next = DATA[(index + 1) % DATA.length];
     if (next) {
