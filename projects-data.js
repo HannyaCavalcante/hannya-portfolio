@@ -4,36 +4,6 @@
    ============================================================ */
 window.PROJECTS_DATA = [
   {
-    id: "casa-vira-lata",
-    name: "Casa do Vira-Lata",
-    category: "UX/UI · Causa Animal",
-    desc: "Projeto voltado à causa animal, com foco em criar uma experiência digital acolhedora e intuitiva para incentivar adoções, doações e conexão entre pessoas e animais resgatados.",
-    variant: "image",
-    image: "assets/service-1.png",
-    cover: "assets/service-1.png",
-    hideName: true,
-    year: "2024",
-    role: "UX/UI Designer",
-    duration: "6 semanas",
-    tools: ["Figma", "FigJam", "Maze"],
-    link: "https://www.figma.com/proto/ZX35nmTU375zOKbmBkCJr9/Casa-do-Vira-lata?node-id=12-58&page-id=0%3A1&starting-point-node-id=12%3A58&t=xYQrVvXiYkMx2VDO-1",
-    linkLabel: "Ver protótipo no Figma",
-    link2: "https://www.behance.net/gallery/250012117/Casa-do-Vira-Lata-Ux-Case",
-    link2Label: "Ver estudo no Behance",
-    overview:
-      "A Casa do Vira-Lata é uma plataforma que conecta protetores independentes e ONGs a pessoas dispostas a adotar ou doar. O objetivo foi transformar um processo geralmente burocrático e fragmentado em uma jornada acolhedora, transparente e fácil de seguir.",
-    challenge:
-      "Adoções esbarravam em formulários longos, falta de informação sobre os animais e pouca confiança entre as partes. Era preciso reduzir a fricção sem perder o cuidado necessário com cada adoção.",
-    solution:
-      "Criei fluxos curtos e guiados, perfis ricos dos animais com fotos e histórico de saúde, e um sistema de mensagens direto entre adotante e protetor. A identidade visual usa tons quentes e ilustrações leves para transmitir acolhimento.",
-    results: [
-      { num: "+40%", label: "intenção de adoção em testes de usabilidade" },
-      { num: "3 cliques", label: "para iniciar um pedido de adoção" },
-      { num: "9/10", label: "nota média de satisfação no protótipo" },
-    ],
-    gallery: ["assets/service-1.png"],
-  },
-  {
     id: "itau",
     name: "Itaú UX | UI",
     category: "UX/UI · Setor Bancário",
@@ -131,6 +101,36 @@ window.PROJECTS_DATA = [
     gallery: [],
   },
   {
+    id: "casa-vira-lata",
+    name: "Casa do Vira-Lata",
+    category: "UX/UI · Causa Animal",
+    desc: "Projeto voltado à causa animal, com foco em criar uma experiência digital acolhedora e intuitiva para incentivar adoções, doações e conexão entre pessoas e animais resgatados.",
+    variant: "image",
+    image: "assets/service-1.png",
+    cover: "assets/service-1.png",
+    hideName: true,
+    year: "2024",
+    role: "UX/UI Designer",
+    duration: "6 semanas",
+    tools: ["Figma", "FigJam", "Maze"],
+    link: "https://www.figma.com/proto/ZX35nmTU375zOKbmBkCJr9/Casa-do-Vira-lata?node-id=12-58&page-id=0%3A1&starting-point-node-id=12%3A58&t=xYQrVvXiYkMx2VDO-1",
+    linkLabel: "Ver protótipo no Figma",
+    link2: "https://www.behance.net/gallery/250012117/Casa-do-Vira-Lata-Ux-Case",
+    link2Label: "Ver estudo no Behance",
+    overview:
+      "A Casa do Vira-Lata é uma plataforma que conecta protetores independentes e ONGs a pessoas dispostas a adotar ou doar. O objetivo foi transformar um processo geralmente burocrático e fragmentado em uma jornada acolhedora, transparente e fácil de seguir.",
+    challenge:
+      "Adoções esbarravam em formulários longos, falta de informação sobre os animais e pouca confiança entre as partes. Era preciso reduzir a fricção sem perder o cuidado necessário com cada adoção.",
+    solution:
+      "Criei fluxos curtos e guiados, perfis ricos dos animais com fotos e histórico de saúde, e um sistema de mensagens direto entre adotante e protetor. A identidade visual usa tons quentes e ilustrações leves para transmitir acolhimento.",
+    results: [
+      { num: "+40%", label: "intenção de adoção em testes de usabilidade" },
+      { num: "3 cliques", label: "para iniciar um pedido de adoção" },
+      { num: "9/10", label: "nota média de satisfação no protótipo" },
+    ],
+    gallery: ["assets/service-1.png"],
+  },
+  {
     id: "flui",
     name: "Flui",
     category: "UX/UI · Mobilidade Elétrica",
@@ -197,15 +197,6 @@ window.PROJECTS_DATA = [
       { num: "Full stack", label: "deploy contínuo via Vercel (frontend) e Railway (backend)" },
     ],
     gallery: [],
-  },
-  {
-    id: "evorun",
-    name: "Evorun",
-    category: "Global Solution",
-    desc: "Projeto em desenvolvimento — em breve mais informações.",
-    variant: "dark",
-    soon: true,
-    year: "2026",
   },
   {
     id: "auren",
