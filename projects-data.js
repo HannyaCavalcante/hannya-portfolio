@@ -168,6 +168,8 @@ window.PROJECTS_DATA = [
     category: "Product Design · Missão Espacial",
     desc: "Sistema de controle de missão espacial que simula a comunicação e gestão operacional de uma tripulação em Marte, com latência real Terra-Marte e painel de monitoramento em tempo real.",
     variant: "dark",
+    cover: "assets/orbit-cover.svg",
+    hideName: true,
     year: "2026",
     date: "2026",
     context: "Desenvolvido para a FIAP Global Solution 2026, com o objetivo de resolver um dos maiores desafios da exploração espacial: a latência de comunicação entre a Terra e Marte (3 a 22 minutos, dependendo do alinhamento orbital).",
@@ -178,8 +180,6 @@ window.PROJECTS_DATA = [
     linkLabel: "Acessar demo",
     link2: "https://github.com/HannyaCavalcante/orbit-mission-control",
     link2Label: "Ver no GitHub",
-    link3: "https://youtu.be/c1wgYZBouTA",
-    link3Label: "Assistir no YouTube",
     team: [
       { name: "Hannya", role: "Product Design & FullStack", link: "https://www.linkedin.com/in/hannyacavalcante/" },
       { name: "Mariana Nikaido", role: "UX & Visão Estratégica", link: "https://www.linkedin.com/in/mariana-nikaido/" },
