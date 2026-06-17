@@ -15,7 +15,7 @@
     const track = document.getElementById("projectTrack");
     if (!track) return;
     track.innerHTML = PROJECTS.map(function (p) {
-      const cls = "project" + (p.variant === "light" ? " project--light" : "") + (p.soon ? " project--soon" : "");
+      const cls = "project" + (p.variant === "light" ? " project--light" : "") + (p.soon ? " project--soon" : "") + (p.logo ? " project--has-logo" : "");
       let bg = "";
       if (p.variant === "image") {
         bg =
