@@ -199,6 +199,37 @@ window.PROJECTS_DATA = [
     gallery: [],
   },
   {
+    id: "fieldsync",
+    name: "FieldSync",
+    category: "Product Design · Full Stack · B2B SaaS",
+    desc: "Plataforma integrada de gestão operacional para equipes em campo: dashboard web para coordenadores, app mobile nativo para técnicos e API REST com autenticação JWT. Desenvolvida end-to-end como projeto individual para a FIAP Global Solution 2025.",
+    variant: "dark",
+    cover: "assets/fieldsync-cover.svg",
+    coverBg: "#0B1220",
+    hideName: true,
+    year: "2026",
+    date: "Junho de 2026",
+    context: "Desenvolvido individualmente para a FIAP Global Solution 2025 — atividade substitutiva. Plataforma integrada com três camadas técnicas: app mobile (React Native + Expo), dashboard web (React + Vite) e API REST (Node.js + Express + SQLite).",
+    role: "Product Design & Full Stack",
+    duration: "FIAP · Global Solution 2025",
+    tools: ["React Native", "Expo", "React", "Vite", "Node.js", "Express", "SQLite", "JWT", "Vercel", "Render.com"],
+    link: "https://fieldsync-web-gamma.vercel.app",
+    linkLabel: "Acessar plataforma",
+    link2: "https://github.com/1TWDOR-11/fieldsync",
+    link2Label: "Ver no GitHub",
+    overview:
+      "FieldSync é uma plataforma integrada de gestão operacional para empresas que coordenam equipes em campo — construtoras, prestadoras de serviços, manutenção e logística. A solução conecta coordenadores (dashboard web) e técnicos de campo (app mobile nativo) via API REST com autenticação JWT e sincronização de status em tempo real. Dois perfis de acesso distintos: Coordenador gerencia tarefas, atribui técnicos, resolve ocorrências e visualiza métricas em gráficos SVG; Técnico acessa tarefas atribuídas, atualiza status e registra ocorrências com foto via câmera ou galeria.",
+    challenge:
+      "Em operações em campo, a falta de visibilidade sobre o andamento das tarefas gera retrabalho, atrasos e falhas de comunicação. Planilhas e apps genéricos não oferecem controle de acesso por papel, histórico vinculado a cada tarefa nem registro fotográfico estruturado de ocorrências. Era preciso criar um fluxo da criação à conclusão que funcionasse simultaneamente em dois contextos radicalmente diferentes: coordenador no computador e técnico em campo, com o celular, por vezes sem estabilidade de conexão.",
+    solution:
+      "Arquitetura three-tier com app mobile (React Native + Expo), dashboard web (React + Vite) e API REST (Node.js + Express + SQLite). Autenticação JWT HS256 com dois perfis de acesso (Coordenador e Técnico). Dashboard com visualização em Lista e Kanban, 4 gráficos SVG nativos (barras, pizza, donut e área), filtros de tarefa por status e prioridade, e registro de ocorrências com upload de fotos via multer (até 5 MB). No app mobile: SecureStore para persistência do token JWT, câmera e galeria via expo-image-picker, navegação por Expo Router e acessibilidade WCAG AA (skip-link no web, accessibilityRole e accessibilityLabel no mobile). Gestão completa de Projetos, Clientes, Departamentos e usuários. Deploy CI/CD com Vercel (frontend) e Render.com (API).",
+    results: [
+      { num: "3 plataformas", label: "app mobile + dashboard web + API REST integrados end-to-end" },
+      { num: "20 endpoints", label: "API REST documentados com autenticação JWT e controle por papel" },
+      { num: "WCAG AA", label: "acessibilidade completa em web (skip-link, ARIA) e mobile (Expo)" },
+    ],
+  },
+  {
     id: "auren",
     name: "Auren",
     category: "Controle Financeiro",

@@ -1,0 +1,294 @@
+<svg viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="fs-bg" cx="28%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#0E1B34"/>
+      <stop offset="100%" stop-color="#0B1220"/>
+    </radialGradient>
+    <radialGradient id="fs-glow-teal" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0D9488" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#0D9488" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fs-glow-blue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="fs-softglow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="14" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="fs-drop" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0D9488" flood-opacity="0.25"/>
+    </filter>
+    <pattern id="fs-dots" x="0" y="0" width="36" height="36" patternUnits="userSpaceOnUse">
+      <circle cx="18" cy="18" r="1" fill="#2563EB" opacity="0.12"/>
+    </pattern>
+    <clipPath id="fs-card-clip">
+      <rect x="590" y="22" width="592" height="631" rx="16"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#fs-bg)"/>
+  <rect width="1200" height="675" fill="url(#fs-dots)"/>
+
+  <!-- Accent bars -->
+  <rect x="0" y="0" width="1200" height="3" fill="#0D9488" opacity="0.7"/>
+  <rect x="0" y="672" width="1200" height="3" fill="#2563EB" opacity="0.45"/>
+
+  <!-- Left glow halos -->
+  <ellipse cx="285" cy="305" rx="230" ry="160" fill="url(#fs-glow-teal)"/>
+  <ellipse cx="285" cy="305" rx="120" ry="85" fill="url(#fs-glow-teal)"/>
+
+  <!-- Right glow -->
+  <ellipse cx="885" cy="338" rx="310" ry="220" fill="url(#fs-glow-blue)"/>
+
+  <!-- Left accent vertical rail -->
+  <line x1="96" y1="60" x2="96" y2="615" stroke="#0D9488" stroke-width="1.5" opacity="0.35"/>
+
+  <!-- Divider between left and right -->
+  <line x1="575" y1="30" x2="575" y2="645" stroke="#1E3A60" stroke-width="1" opacity="0.55"/>
+
+  <!-- ═══════════ LEFT SECTION: BRAND ═══════════ -->
+
+  <!-- FieldSync logo mark (viewBox 0 0 200 126, scale 1.72 → 344×217) -->
+  <!-- centered at (287, 302) → translate(287-172, 302-108.5) = (115, 193.5) -->
+  <g transform="translate(115, 193) scale(1.72)" filter="url(#fs-softglow)">
+    <path d="M0 66.8958C0.129726 99.1123 26.3769 125.514 58.6205 125.514C90.9434 125.514 117.239 99.2187 117.239 66.8958V58.6205C117.239 45.311 128.068 34.4818 141.378 34.4818C154.689 34.4818 165.516 45.311 165.516 58.6205C165.516 62.429 168.604 65.5172 172.413 65.5172H193.103C196.914 65.5172 200 62.429 200 58.6205C200 26.2975 173.704 0 141.38 0C109.057 0 82.7591 26.2975 82.7591 58.6205V66.8958C82.7591 80.2072 71.9299 91.0325 58.6224 91.0325C45.3129 91.0325 34.4838 80.2072 34.4838 66.8958C34.4838 63.0873 31.3955 59.999 27.587 59.999H6.89675C3.08824 60.001 0 63.0873 0 66.8958Z" fill="#0D9488" filter="url(#fs-drop)"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="116" y="466" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="52" font-weight="700" letter-spacing="-1.5">
+    <tspan fill="#ffffff">Field</tspan><tspan fill="#0D9488">Sync</tspan>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="120" y="493" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="11.5" font-weight="400" fill="#0D9488" letter-spacing="4" opacity="0.85">FIELD OPERATIONS PLATFORM</text>
+
+  <!-- Thin separator -->
+  <line x1="116" y1="512" x2="540" y2="512" stroke="#1B3355" stroke-width="1"/>
+
+  <!-- Feature chips -->
+  <g font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="10" font-weight="500">
+    <!-- JWT -->
+    <rect x="116" y="524" width="92" height="22" rx="5" fill="#2563EB" fill-opacity="0.16" stroke="#2563EB" stroke-width="0.8" stroke-opacity="0.45"/>
+    <text x="162" y="538.5" fill="#93C5FD" text-anchor="middle">Autenticação JWT</text>
+    <!-- Kanban -->
+    <rect x="214" y="524" width="70" height="22" rx="5" fill="#0D9488" fill-opacity="0.14" stroke="#0D9488" stroke-width="0.8" stroke-opacity="0.45"/>
+    <text x="249" y="538.5" fill="#5EEAD4" text-anchor="middle">Kanban</text>
+    <!-- API REST -->
+    <rect x="290" y="524" width="66" height="22" rx="5" fill="#4F46E5" fill-opacity="0.16" stroke="#4F46E5" stroke-width="0.8" stroke-opacity="0.45"/>
+    <text x="323" y="538.5" fill="#C4B5FD" text-anchor="middle">API REST</text>
+    <!-- Mobile -->
+    <rect x="362" y="524" width="74" height="22" rx="5" fill="#2563EB" fill-opacity="0.16" stroke="#2563EB" stroke-width="0.8" stroke-opacity="0.4"/>
+    <text x="399" y="538.5" fill="#93C5FD" text-anchor="middle">App Mobile</text>
+    <!-- SVG Charts -->
+    <rect x="116" y="552" width="80" height="22" rx="5" fill="#0D9488" fill-opacity="0.14" stroke="#0D9488" stroke-width="0.8" stroke-opacity="0.4"/>
+    <text x="156" y="566.5" fill="#5EEAD4" text-anchor="middle">Gráficos SVG</text>
+    <!-- CI/CD -->
+    <rect x="202" y="552" width="64" height="22" rx="5" fill="#4F46E5" fill-opacity="0.14" stroke="#4F46E5" stroke-width="0.8" stroke-opacity="0.4"/>
+    <text x="234" y="566.5" fill="#C4B5FD" text-anchor="middle">CI/CD</text>
+    <!-- WCAG -->
+    <rect x="272" y="552" width="66" height="22" rx="5" fill="#2563EB" fill-opacity="0.14" stroke="#2563EB" stroke-width="0.8" stroke-opacity="0.4"/>
+    <text x="305" y="566.5" fill="#93C5FD" text-anchor="middle">WCAG AA</text>
+  </g>
+
+  <!-- FIAP label -->
+  <text x="120" y="624" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="10.5" fill="#2E4A6A" letter-spacing="1.5">FIAP · GLOBAL SOLUTION 2025</text>
+
+  <!-- ═══════════ RIGHT SECTION: UI CARDS ═══════════ -->
+
+  <!-- ── MAIN CARD: DASHBOARD ── -->
+  <rect x="592" y="24" width="592" height="286" rx="12" fill="#0D1829" stroke="#1B3355" stroke-width="1.5"/>
+  <!-- card header -->
+  <rect x="592" y="24" width="592" height="46" rx="12" fill="#111F38"/>
+  <rect x="592" y="58" width="592" height="12" fill="#111F38"/>
+  <!-- header text -->
+  <text x="612" y="53" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="white">Dashboard</text>
+  <!-- live dot -->
+  <circle cx="1162" cy="47" r="4.5" fill="#0D9488"/>
+  <text x="1155" y="51" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8.5" fill="#0D9488" text-anchor="end">ao vivo</text>
+
+  <!-- KPI cards row -->
+  <!-- Total -->
+  <rect x="606" y="82" width="122" height="58" rx="8" fill="#132040" stroke="#1B3355" stroke-width="1"/>
+  <text x="618" y="103" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8.5" fill="#5A7BA0">Total</text>
+  <text x="618" y="129" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="26" font-weight="700" fill="white">24</text>
+  <!-- Pendentes -->
+  <rect x="736" y="82" width="122" height="58" rx="8" fill="#132040" stroke="#1B3355" stroke-width="1"/>
+  <text x="748" y="103" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8.5" fill="#5A7BA0">Pendentes</text>
+  <text x="748" y="129" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="26" font-weight="700" fill="#D97706">8</text>
+  <!-- Em andamento -->
+  <rect x="866" y="82" width="140" height="58" rx="8" fill="#132040" stroke="#1B3355" stroke-width="1"/>
+  <text x="878" y="103" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8.5" fill="#5A7BA0">Em Andamento</text>
+  <text x="878" y="129" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="26" font-weight="700" fill="#3B82F6">11</text>
+  <!-- Concluídas -->
+  <rect x="1014" y="82" width="150" height="58" rx="8" fill="#132040" stroke="#1B3355" stroke-width="1"/>
+  <text x="1026" y="103" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8.5" fill="#5A7BA0">Concluídas</text>
+  <text x="1026" y="129" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="26" font-weight="700" fill="#0D9488">5</text>
+
+  <!-- Chart area -->
+  <text x="610" y="165" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8.5" fill="#3A5A7A">Tarefas por prioridade</text>
+  <!-- Horizontal bar chart -->
+  <!-- Alta -->
+  <text x="614" y="185" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8" fill="#5A7BA0">Alta</text>
+  <rect x="644" y="175" width="210" height="13" rx="3" fill="#DC2626" opacity="0.82"/>
+  <text x="858" y="185" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8" fill="#FCA5A5" opacity="0.9">  9</text>
+  <!-- Média -->
+  <text x="614" y="205" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8" fill="#5A7BA0">Média</text>
+  <rect x="644" y="195" width="154" height="13" rx="3" fill="#D97706" opacity="0.82"/>
+  <text x="802" y="205" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8" fill="#FCD34D" opacity="0.9">  7</text>
+  <!-- Baixa -->
+  <text x="614" y="225" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8" fill="#5A7BA0">Baixa</text>
+  <rect x="644" y="215" width="88" height="13" rx="3" fill="#0D9488" opacity="0.82"/>
+  <text x="736" y="225" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8" fill="#5EEAD4" opacity="0.9">  4</text>
+
+  <!-- Donut chart (r=42, circumference≈264) -->
+  <!-- Sectors: Alta 9/24=37.5%→99, Média 7/24=29.2%→77, Baixa 4/24=16.7%→44 -->
+  <!-- offset to start at 12 o'clock: dashoffset = circumference*0.25 = 66 -->
+  <circle cx="1090" cy="210" r="42" fill="none" stroke="#1B3355" stroke-width="18"/>
+  <circle cx="1090" cy="210" r="42" fill="none" stroke="#DC2626" stroke-width="18" stroke-dasharray="99 165" stroke-dashoffset="66" opacity="0.88"/>
+  <circle cx="1090" cy="210" r="42" fill="none" stroke="#D97706" stroke-width="18" stroke-dasharray="77 187" stroke-dashoffset="-33" opacity="0.88"/>
+  <circle cx="1090" cy="210" r="42" fill="none" stroke="#0D9488" stroke-width="18" stroke-dasharray="44 220" stroke-dashoffset="-110" opacity="0.88"/>
+  <text x="1090" y="205" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="18" font-weight="700" fill="white" text-anchor="middle">24</text>
+  <text x="1090" y="220" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8" fill="#3A5A7A" text-anchor="middle">tarefas</text>
+
+  <!-- Separator -->
+  <line x1="606" y1="244" x2="1168" y2="244" stroke="#1B3355" stroke-width="1"/>
+  <text x="610" y="260" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8.5" fill="#3A5A7A">Tarefas recentes</text>
+  <!-- Row 1 -->
+  <circle cx="618" cy="278" r="3.5" fill="#DC2626"/>
+  <text x="628" y="281.5" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="9" fill="white">Instalação elétrica — Bloco A</text>
+  <rect x="920" y="270" width="80" height="16" rx="4" fill="#2563EB" fill-opacity="0.22"/>
+  <text x="960" y="281" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7.5" fill="#93C5FD" text-anchor="middle">Em andamento</text>
+  <!-- Row 2 -->
+  <circle cx="618" cy="298" r="3.5" fill="#D97706"/>
+  <text x="628" y="301.5" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="9" fill="white">Vistoria de equipamentos</text>
+  <rect x="920" y="290" width="64" height="16" rx="4" fill="#D97706" fill-opacity="0.22"/>
+  <text x="952" y="301" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7.5" fill="#FCD34D" text-anchor="middle">Pendente</text>
+
+  <!-- ── BOTTOM-LEFT CARD: KANBAN ── -->
+  <rect x="592" y="326" width="286" height="322" rx="12" fill="#0D1829" stroke="#1B3355" stroke-width="1.5"/>
+  <rect x="592" y="326" width="286" height="46" rx="12" fill="#111F38"/>
+  <rect x="592" y="360" width="286" height="12" fill="#111F38"/>
+  <text x="610" y="355" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="white">Tarefas — Kanban</text>
+
+  <!-- Column headers -->
+  <!-- Pendente col: x=602, w=82 -->
+  <rect x="602" y="384" width="82" height="18" rx="4" fill="#D97706" fill-opacity="0.18"/>
+  <text x="643" y="395.5" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8" fill="#FCD34D" text-anchor="middle">Pendente · 8</text>
+  <!-- Andamento col: x=692, w=82 -->
+  <rect x="692" y="384" width="82" height="18" rx="4" fill="#2563EB" fill-opacity="0.18"/>
+  <text x="733" y="395.5" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8" fill="#93C5FD" text-anchor="middle">Andamento · 11</text>
+  <!-- Concluído col: x=782, w=82 -->
+  <rect x="782" y="384" width="84" height="18" rx="4" fill="#0D9488" fill-opacity="0.16"/>
+  <text x="824" y="395.5" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8" fill="#5EEAD4" text-anchor="middle">Concluído · 5</text>
+
+  <!-- Pendente cards -->
+  <rect x="602" y="410" width="82" height="52" rx="7" fill="#132040" stroke="#D97706" stroke-width="0.8" stroke-opacity="0.4"/>
+  <circle cx="613" cy="423" r="3" fill="#DC2626"/>
+  <text x="620" y="426" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7.5" fill="white">Instalação</text>
+  <text x="620" y="437" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7" fill="#5A7BA0">Bloco A</text>
+  <text x="604" y="455.5" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7" fill="#DC2626">● Alta</text>
+  <rect x="602" y="468" width="82" height="52" rx="7" fill="#132040" stroke="#D97706" stroke-width="0.8" stroke-opacity="0.3"/>
+  <circle cx="613" cy="481" r="3" fill="#D97706"/>
+  <text x="620" y="484" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7.5" fill="white">Vistoria</text>
+  <text x="620" y="495" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7" fill="#5A7BA0">Setor 3</text>
+  <text x="604" y="513.5" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7" fill="#D97706">● Média</text>
+
+  <!-- Andamento cards -->
+  <rect x="692" y="410" width="82" height="52" rx="7" fill="#132040" stroke="#2563EB" stroke-width="0.8" stroke-opacity="0.4"/>
+  <circle cx="703" cy="423" r="3" fill="#2563EB"/>
+  <text x="710" y="426" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7.5" fill="white">Manutenção</text>
+  <text x="710" y="437" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7" fill="#5A7BA0">HVAC</text>
+  <text x="694" y="455.5" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7" fill="#DC2626">● Alta</text>
+  <rect x="692" y="468" width="82" height="52" rx="7" fill="#132040" stroke="#2563EB" stroke-width="0.8" stroke-opacity="0.3"/>
+  <circle cx="703" cy="481" r="3" fill="#2563EB"/>
+  <text x="710" y="484" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7.5" fill="white">Reparo</text>
+  <text x="710" y="495" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7" fill="#5A7BA0">Elétrico</text>
+  <text x="694" y="513.5" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7" fill="#D97706">● Média</text>
+
+  <!-- Concluído cards -->
+  <rect x="782" y="410" width="84" height="52" rx="7" fill="#132040" stroke="#0D9488" stroke-width="0.8" stroke-opacity="0.5"/>
+  <circle cx="793" cy="423" r="3" fill="#0D9488"/>
+  <text x="800" y="426" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7.5" fill="white">Limpeza</text>
+  <text x="800" y="437" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7" fill="#5A7BA0">Industrial</text>
+  <text x="784" y="455.5" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7" fill="#0D9488">● Concluída</text>
+
+  <!-- Mobile section inside kanban card -->
+  <line x1="602" y1="536" x2="866" y2="536" stroke="#1B3355" stroke-width="1"/>
+  <text x="610" y="552" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8.5" fill="#3A5A7A">App Mobile · React Native + Expo</text>
+  <circle cx="618" cy="568" r="3" fill="#0D9488"/>
+  <text x="627" y="571.5" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8" fill="white">Olá, Maria · 3 tarefas atribuídas</text>
+  <circle cx="618" cy="586" r="3" fill="#2563EB"/>
+  <text x="627" y="589.5" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8" fill="white">Iniciar · Concluir · Ocorrência</text>
+  <!-- Badges -->
+  <rect x="602" y="600" width="80" height="20" rx="5" fill="#4F46E5" fill-opacity="0.2" stroke="#4F46E5" stroke-width="0.7" stroke-opacity="0.4"/>
+  <text x="642" y="613" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7.5" fill="#C4B5FD" text-anchor="middle">SecureStore JWT</text>
+  <rect x="690" y="600" width="84" height="20" rx="5" fill="#2563EB" fill-opacity="0.18" stroke="#2563EB" stroke-width="0.7" stroke-opacity="0.35"/>
+  <text x="732" y="613" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7.5" fill="#93C5FD" text-anchor="middle">expo-image-picker</text>
+  <rect x="782" y="600" width="82" height="20" rx="5" fill="#0D9488" fill-opacity="0.16" stroke="#0D9488" stroke-width="0.7" stroke-opacity="0.38"/>
+  <text x="823" y="613" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7.5" fill="#5EEAD4" text-anchor="middle">Expo Router</text>
+  <text x="610" y="638" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7.5" fill="#2E4A6A">RefreshControl · FlatList · Expo Go / EAS Build</text>
+
+  <!-- ── BOTTOM-RIGHT CARD: API + OCCURRENCES ── -->
+  <rect x="892" y="326" width="292" height="322" rx="12" fill="#0D1829" stroke="#1B3355" stroke-width="1.5"/>
+  <rect x="892" y="326" width="292" height="46" rx="12" fill="#111F38"/>
+  <rect x="892" y="360" width="292" height="12" fill="#111F38"/>
+  <text x="910" y="355" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="white">API REST · Ocorrências</text>
+
+  <!-- Endpoint list -->
+  <text x="910" y="385" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8" fill="#3A5A7A">20 endpoints · JWT em todas as rotas protegidas</text>
+
+  <!-- endpoints -->
+  <rect x="910" y="392" width="32" height="14" rx="3" fill="#0D9488" fill-opacity="0.28"/>
+  <text x="926" y="402.5" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7.5" fill="#5EEAD4" text-anchor="middle">GET</text>
+  <text x="946" y="402.5" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8" fill="#7A9BBE">/api/tasks</text>
+  <text x="1168" y="402.5" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7.5" fill="#0D9488" text-anchor="end">200 ✓</text>
+
+  <rect x="910" y="411" width="36" height="14" rx="3" fill="#2563EB" fill-opacity="0.28"/>
+  <text x="928" y="421.5" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7.5" fill="#93C5FD" text-anchor="middle">POST</text>
+  <text x="950" y="421.5" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8" fill="#7A9BBE">/api/tasks</text>
+  <text x="1168" y="421.5" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7.5" fill="#2563EB" text-anchor="end">201 ✓</text>
+
+  <rect x="910" y="430" width="44" height="14" rx="3" fill="#D97706" fill-opacity="0.26"/>
+  <text x="932" y="440.5" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7.5" fill="#FCD34D" text-anchor="middle">PATCH</text>
+  <text x="958" y="440.5" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8" fill="#7A9BBE">/api/tasks/:id/status</text>
+  <text x="1168" y="440.5" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7.5" fill="#D97706" text-anchor="end">200 ✓</text>
+
+  <rect x="910" y="449" width="36" height="14" rx="3" fill="#2563EB" fill-opacity="0.28"/>
+  <text x="928" y="459.5" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7.5" fill="#93C5FD" text-anchor="middle">POST</text>
+  <text x="950" y="459.5" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8" fill="#7A9BBE">/api/occurrences</text>
+  <text x="1168" y="459.5" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7.5" fill="#2563EB" text-anchor="end">201 ✓</text>
+
+  <rect x="910" y="468" width="44" height="14" rx="3" fill="#DC2626" fill-opacity="0.22"/>
+  <text x="932" y="478.5" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7.5" fill="#FCA5A5" text-anchor="middle">DELETE</text>
+  <text x="958" y="478.5" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8" fill="#7A9BBE">/api/tasks/:id</text>
+  <text x="1168" y="478.5" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7.5" fill="#DC2626" text-anchor="end">204 ✓</text>
+
+  <!-- separator -->
+  <line x1="904" y1="496" x2="1172" y2="496" stroke="#1B3355" stroke-width="1"/>
+  <text x="910" y="513" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8.5" fill="#3A5A7A">Ocorrências com foto · upload multipart 5MB</text>
+
+  <!-- Occurrence item 1 - open -->
+  <rect x="904" y="521" width="264" height="62" rx="9" fill="#132040" stroke="#DC2626" stroke-width="0.9" stroke-opacity="0.45"/>
+  <!-- Camera icon -->
+  <rect x="912" y="531" width="38" height="30" rx="5" fill="#1A2D48"/>
+  <circle cx="931" cy="546" r="9" fill="none" stroke="#5A7BA0" stroke-width="1.5"/>
+  <circle cx="931" cy="546" r="5" fill="#5A7BA0"/>
+  <text x="955" y="538" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8.5" font-weight="600" fill="white">Fiação exposta — Bloco A</text>
+  <text x="955" y="551" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7.5" fill="#5A7BA0">Bloco A · Carlos · Andamento</text>
+  <rect x="1068" y="530" width="60" height="14" rx="4" fill="#DC2626" fill-opacity="0.24"/>
+  <text x="1098" y="540" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7" fill="#FCA5A5" text-anchor="middle">Em aberto</text>
+  <text x="955" y="564" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7" fill="#3A5A7A">Atribuída a Carlos · 2h atrás</text>
+
+  <!-- Occurrence item 2 - resolved -->
+  <rect x="904" y="590" width="264" height="50" rx="9" fill="#132040" stroke="#0D9488" stroke-width="0.9" stroke-opacity="0.45"/>
+  <rect x="912" y="600" width="30" height="24" rx="5" fill="#1A2D48"/>
+  <circle cx="927" cy="612" r="7" fill="none" stroke="#0D9488" stroke-width="1.5"/>
+  <circle cx="927" cy="612" r="3.5" fill="#0D9488"/>
+  <text x="948" y="607" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="8.5" font-weight="600" fill="white">Equipamento calibrado</text>
+  <text x="948" y="619" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7.5" fill="#5A7BA0">Setor 3 · Resolvida</text>
+  <rect x="1070" y="599" width="58" height="14" rx="4" fill="#0D9488" fill-opacity="0.22"/>
+  <text x="1099" y="609" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7" fill="#5EEAD4" text-anchor="middle">Resolvida</text>
+  <text x="910" y="638" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-size="7.5" fill="#2E4A6A">JWT HS256 · bcryptjs · RBAC · CORS · CI/CD Vercel + Render</text>
+</svg>
