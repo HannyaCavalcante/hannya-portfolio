@@ -809,6 +809,18 @@ section { position: relative; }
 .carousel__btn:hover { background: var(--primary); color: #fff; border-color: var(--primary); transform: scale(1.06); }
 .carousel__btn svg { width: 22px; height: 22px; }
 
+/* ---- Project Grid (2 per row) ---- */
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+.proj-grid .project {
+  flex: none;
+  width: 100%;
+  scroll-snap-align: none;
+}
+
 .chips { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 44px; }
 .chip {
   font-family: var(--font-body);
@@ -1361,6 +1373,7 @@ html.has-fcursor * { cursor: none !important; }
   }
   .timeline__col { margin-bottom: 0; }
   .project { flex: 0 0 100%; }
+  .proj-grid { grid-template-columns: 1fr; }
   .pd-results { grid-template-columns: repeat(3, 1fr); }
 }
 
