@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Processo — Hannya Cavalcante</title>
+<meta name="description" content="Como Hannya Cavalcante pensa e trabalha — framework de produto de ponta a ponta." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <a class="nav__brand-mobile" href="index.html" aria-label="Início">HC</a>
+  <div class="nav__links" id="navLinks">
+    <a class="nav__link" href="index.html#home" data-link>Home</a>
+    <a class="nav__link" href="index.html#servicos" data-link data-i18n="nav.services">Serviços</a>
+    <a class="nav__logo" href="index.html#home" aria-label="Hannya Cavalcante">HC</a>
+    <a class="nav__link" href="index.html#projetos" data-link data-i18n="nav.projects">Projetos</a>
+    <a class="nav__link is-active" href="processo.html" data-i18n="nav.process">Processo</a>
+    <a class="nav__link" href="index.html#contato" data-link data-i18n="nav.contact">Contato</a>
+  </div>
+  <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema" data-cursor>
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+  </button>
+  <button class="lang-toggle" id="langToggle" aria-label="Switch to English" data-cursor>
+    <span class="lang-pt is-active">PT</span>
+    <span class="lang-sep">|</span>
+    <span class="lang-en">EN</span>
+  </button>
+  <button class="nav__burger" id="burger" aria-label="Menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+</nav>
+
+<main class="pd">
+
+  <!-- HERO -->
+  <header class="pd-hero container">
+    <a class="pd-back" href="index.html" data-cursor data-cursor-label="Voltar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5 8 12l7 7"/></svg>
+      <span data-i18n="proc.back">Voltar ao portfólio</span>
+    </a>
+    <p class="pd-hero__cat" data-i18n="proc.badge">Framework de trabalho</p>
+    <h1 class="pd-hero__title" data-i18n="proc.title">Processo</h1>
+    <p class="pd-hero__desc" data-i18n="proc.subtitle">Como eu penso</p>
+    <!-- PLACEHOLDER: 2–3 frases apresentando sua filosofia de trabalho — o que te diferencia, o que nunca abre mão, o tom geral da página -->
+    <p class="pd-hero__context">
+      [PLACEHOLDER: Breve intro — ex: "Processo não é burocracia. É o que separa uma entrega bonita de uma entrega que resolve. Aqui está como eu penso quando estou construindo produto."]
+    </p>
+  </header>
+
+  <!-- ETAPAS -->
+  <div class="pd-body container">
+
+    <!-- 01 — Descoberta -->
+    <section class="proc-step reveal">
+      <div class="proc-step__head">
+        <span class="proc-step__num">01</span>
+        <h2 class="proc-step__title" data-i18n="proc.step1-title">Descoberta</h2>
+      </div>
+      <div class="proc-step__body">
+        <!-- PLACEHOLDER: Como você conduz a fase de descoberta.
+             Sugestão de pontos: métodos de pesquisa que usa (entrevistas, desk research, analytics),
+             como você valida que está investigando o problema certo, fontes de dados que confia. -->
+        <p class="pd-block__text">
+          [PLACEHOLDER: Descreva como você entra numa descoberta — quais perguntas faz primeiro, quais métodos usa (entrevistas, analytics, benchmarking) e como decide quando tem dados suficientes para avançar.]
+        </p>
+        <!-- Se houver uso de IA nesta etapa, descomente o bloco abaixo e preencha:
+        <div class="proc-ai">
+          <span class="proc-ai__label" data-i18n="proc.ai-label">IA no processo</span>
+          <p class="proc-ai__text">[PLACEHOLDER: Como você usa IA na descoberta — ex: síntese de entrevistas, clustering de insights, etc.]</p>
+        </div>
+        -->
+      </div>
+    </section>
+
+    <!-- 02 — Definição do problema -->
+    <section class="proc-step reveal">
+      <div class="proc-step__head">
+        <span class="proc-step__num">02</span>
+        <h2 class="proc-step__title" data-i18n="proc.step2-title">Definição do problema</h2>
+      </div>
+      <div class="proc-step__body">
+        <!-- PLACEHOLDER: Como você transforma dados de descoberta num problema bem definido.
+             Sugestão: frameworks que usa (HMW, POV, Jobs-to-be-Done), como prioriza,
+             critérios para saber que o problema está bem recortado. -->
+        <p class="pd-block__text">
+          [PLACEHOLDER: Descreva como você vai de "tenho dados" para "sei exatamente o que precisa ser resolvido" — ferramentas, critérios de priorização, como você articula o problema para o time.]
+        </p>
+        <!-- Etapa confirmada com uso de IA — preencha abaixo: -->
+        <div class="proc-ai">
+          <span class="proc-ai__label" data-i18n="proc.ai-label">IA no processo</span>
+          <p class="proc-ai__text">
+            [PLACEHOLDER: Como você usa IA na definição do problema — ex: geração de hipóteses, síntese de pesquisa, identificação de padrões nos dados.]
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 — Ideação ágil -->
+    <section class="proc-step reveal">
+      <div class="proc-step__head">
+        <span class="proc-step__num">03</span>
+        <h2 class="proc-step__title" data-i18n="proc.step3-title">Ideação ágil</h2>
+      </div>
+      <div class="proc-step__body">
+        <!-- PLACEHOLDER: Como você ideaciona — solo ou em equipe, ciclos curtos, MVP thinking.
+             Sugestão: como você decide o que é MVP vs. nice-to-have, como corta escopo sem
+             perder o núcleo da solução, como lida com a tensão entre agilidade e qualidade. -->
+        <p class="pd-block__text">
+          [PLACEHOLDER: Descreva sua abordagem de ideação — o que significa MVP pra você, como você cicla rápido entre ideias, como decide o que entra e o que sai da primeira versão.]
+        </p>
+        <!-- Se houver uso de IA nesta etapa, descomente:
+        <div class="proc-ai">
+          <span class="proc-ai__label" data-i18n="proc.ai-label">IA no processo</span>
+          <p class="proc-ai__text">[PLACEHOLDER: Como você usa IA na ideação.]</p>
+        </div>
+        -->
+      </div>
+    </section>
+
+    <!-- 04 — Prototipação -->
+    <section class="proc-step reveal">
+      <div class="proc-step__head">
+        <span class="proc-step__num">04</span>
+        <h2 class="proc-step__title" data-i18n="proc.step4-title">Prototipação</h2>
+      </div>
+      <div class="proc-step__body">
+        <!-- PLACEHOLDER: Seu critério para escolher o tipo de protótipo certo.
+             Sugestão: quando você faz wireframe vs. protótipo navegável vs. mockup visual,
+             como você calibra fidelidade com o objetivo do teste, ferramentas preferidas. -->
+        <p class="pd-block__text">
+          [PLACEHOLDER: Explique quando cada nível de fidelidade faz sentido — wireframe para validar fluxo, protótipo navegável para testar interação, mockup para aprovação visual — e como você decide o que usar em cada momento.]
+        </p>
+        <!-- Se houver uso de IA nesta etapa, descomente:
+        <div class="proc-ai">
+          <span class="proc-ai__label" data-i18n="proc.ai-label">IA no processo</span>
+          <p class="proc-ai__text">[PLACEHOLDER: Como você usa IA na prototipação.]</p>
+        </div>
+        -->
+      </div>
+    </section>
+
+    <!-- 05 — Teste & Iteração -->
+    <section class="proc-step reveal">
+      <div class="proc-step__head">
+        <span class="proc-step__num">05</span>
+        <h2 class="proc-step__title" data-i18n="proc.step5-title">Teste & Iteração</h2>
+      </div>
+      <div class="proc-step__body">
+        <!-- PLACEHOLDER: Como você testa com usuários reais.
+             Sugestão: métodos de teste preferidos (moderado, não-moderado, A/B),
+             como você define o que é "passou no teste", quantas rodadas faz antes de
+             decidir que está pronto para entregar. -->
+        <p class="pd-block__text">
+          [PLACEHOLDER: Descreva como você conduz testes com usuários — metodologia, número de participantes, o que observa, como transforma feedbacks em decisões de design.]
+        </p>
+        <!-- Se houver uso de IA nesta etapa, descomente:
+        <div class="proc-ai">
+          <span class="proc-ai__label" data-i18n="proc.ai-label">IA no processo</span>
+          <p class="proc-ai__text">[PLACEHOLDER: Como você usa IA em teste e iteração.]</p>
+        </div>
+        -->
+      </div>
+    </section>
+
+    <!-- 06 — Entrega & Aprendizado -->
+    <section class="proc-step reveal">
+      <div class="proc-step__head">
+        <span class="proc-step__num">06</span>
+        <h2 class="proc-step__title" data-i18n="proc.step6-title">Entrega & Aprendizado</h2>
+      </div>
+      <div class="proc-step__body">
+        <!-- PLACEHOLDER: O que acontece depois da entrega.
+             Sugestão: como você faz handoff para dev, o que documenta,
+             como você acompanha métricas pós-lançamento e transforma isso em aprendizado
+             para o próximo ciclo. -->
+        <p class="pd-block__text">
+          [PLACEHOLDER: Descreva o que entrega além das telas — documentação, handoff, acompanhamento de métricas — e como fecha o ciclo de aprendizado para a próxima iteração.]
+        </p>
+        <!-- Se houver uso de IA nesta etapa, descomente:
+        <div class="proc-ai">
+          <span class="proc-ai__label" data-i18n="proc.ai-label">IA no processo</span>
+          <p class="proc-ai__text">[PLACEHOLDER: Como você usa IA na entrega e documentação.]</p>
+        </div>
+        -->
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="pd-cta reveal">
+      <a class="btn-pill" href="index.html#projetos" data-cursor data-cursor-label="Projetos" data-i18n="proc.cta">
+        Ver projetos
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+      <a class="pd-cta__contact" href="index.html#contato" data-cursor data-i18n="pd.contact">Vamos conversar →</a>
+    </div>
+
+  </div>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer container">
+  <div class="footer__inner">
+    <div class="footer__brand">Hannya Cavalcante<small>UX | UI Designer</small></div>
+    <div class="footer__socials">
+      <a class="social" href="https://www.linkedin.com/in/hannyacavalcante/" target="_blank" rel="noopener" aria-label="LinkedIn" data-cursor>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm6 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.3 0-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9V9z"/></svg>
+      </a>
+      <a class="social" href="https://www.behance.net/hannyacavalcante" target="_blank" rel="noopener" aria-label="Behance" data-cursor>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.2 10.3c.6-.3.9-.9.9-1.6 0-1.5-1.1-2.2-2.9-2.2H2v9.4h4.4c1.9 0 3.2-.9 3.2-2.7 0-1.1-.5-1.9-1.4-2.3zM4 8.2h1.9c.7 0 1.2.3 1.2 1s-.4 1-1.2 1H4v-2zm2.1 5.6H4v-2.2h2.2c.9 0 1.4.4 1.4 1.1 0 .8-.6 1.1-1.5 1.1zM22 12.6c0-2.2-1.3-4-3.7-4-2.3 0-3.9 1.7-3.9 4 0 2.4 1.5 4 4 4 1.9 0 3.1-.9 3.5-2.3h-2c-.2.5-.7.7-1.4.7-1 0-1.6-.6-1.7-1.6H22v-.8zm-5.1-.9c.1-.9.7-1.4 1.5-1.4.9 0 1.4.5 1.4 1.4h-2.9zM15 7.5h4.5v1.1H15V7.5z"/></svg>
+      </a>
+    </div>
+  </div>
+  <p class="footer__copy">© <span id="year"></span> Hannya Cavalcante. <span data-i18n="footer.copy">Todos os direitos reservados.</span></p>
+</footer>
+
+<!-- custom cursor -->
+<div class="fcursor" id="fcursor" aria-hidden="true">
+  <svg viewBox="0 0 24 24" width="24" height="24">
+    <path d="M4.5 2 L4.5 18.6 L8.7 14.7 L11.4 20.8 L13.9 19.6 L11.2 13.6 L16.8 13.4 Z"
+          stroke="#ffffff" stroke-width="1.5" stroke-linejoin="round"/>
+  </svg>
+  <span class="fcursor__label" id="fcursorLabel">Hannya</span>
+</div>
+
+<script src="i18n.js"></script>
+<script src="processo.js"></script>
+
+</body>
+</html>
