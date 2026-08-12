@@ -15,10 +15,26 @@
 
     if (!chapters.length) return;
 
+    /* Fecha a trilha no último marcador (a altura do bloco final varia) */
+    function sizePath() {
+      if (!path) return;
+      var marks = document.querySelectorAll(".proc-chapter__mark");
+      var last  = marks[marks.length - 1];
+      if (!last) return;
+      path.style.height = "auto";
+      path.style.bottom = "auto";
+      var pathTop  = path.getBoundingClientRect().top;
+      var markRect = last.getBoundingClientRect();
+      path.style.height = Math.max(0, markRect.top + markRect.height / 2 - pathTop) + "px";
+    }
+
     if (reduced) {
       chapters.forEach(function (c) { c.classList.add("is-lit"); });
       if (end) end.classList.add("is-lit");
       if (pathFill) pathFill.style.height = "100%";
+      sizePath();
+      window.addEventListener("load", sizePath);
+      window.addEventListener("resize", sizePath, { passive: true });
       return;
     }
 
@@ -38,6 +54,7 @@
     /* Trilha preenche conforme o scroll atravessa a jornada */
     if (pathFill && path) {
       var ticking = false;
+
       function draw() {
         var rect = path.getBoundingClientRect();
         var mid  = window.innerHeight * 0.55;
@@ -45,10 +62,13 @@
         pathFill.style.height = Math.max(0, Math.min(100, pct)) + "%";
         ticking = false;
       }
+
       window.addEventListener("scroll", function () {
         if (!ticking) { ticking = true; requestAnimationFrame(draw); }
       }, { passive: true });
-      window.addEventListener("resize", draw, { passive: true });
+      window.addEventListener("resize", function () { sizePath(); draw(); }, { passive: true });
+      window.addEventListener("load", function () { sizePath(); draw(); });
+      sizePath();
       draw();
     }
   }
