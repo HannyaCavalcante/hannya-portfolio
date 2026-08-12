@@ -220,11 +220,24 @@
     });
   }
 
-  /* ---------- Contact form (mailto) ---------- */
+  /* ---------- Contact form (mailto) ----------
+     O submit abre o cliente de e-mail. Quem não tem um configurado (comum no
+     Windows) não via retorno nenhum, então mostramos o endereço com botão de
+     copiar como saída alternativa. */
+  const CONTACT_EMAIL = "hannyacavalcante@hotmail.com";
+
   function initContact() {
     const form = document.getElementById("contactForm");
     const input = document.getElementById("contactEmail");
+    const status = document.getElementById("contactStatus");
     if (!form || !input) return;
+
+    function announce(html) {
+      if (!status) return;
+      status.innerHTML = html;
+      status.hidden = false;
+    }
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       const visitor = input.value.trim();
@@ -235,7 +248,23 @@
           "\n\n"
       );
       window.location.href =
-        "mailto:hannyacavalcante@hotmail.com?subject=" + subject + "&body=" + body;
+        "mailto:" + CONTACT_EMAIL + "?subject=" + subject + "&body=" + body;
+
+      announce(
+        'Abrimos seu programa de e-mail. Não abriu? Escreva para ' +
+        '<strong>' + CONTACT_EMAIL + '</strong> ' +
+        '<button type="button" class="contact__copy" id="contactCopy">copiar</button>'
+      );
+
+      const copy = document.getElementById("contactCopy");
+      if (copy) {
+        copy.addEventListener("click", function () {
+          navigator.clipboard.writeText(CONTACT_EMAIL).then(
+            function () { copy.textContent = "copiado"; },
+            function () { copy.textContent = "copie manualmente"; }
+          );
+        });
+      }
     });
   }
 
