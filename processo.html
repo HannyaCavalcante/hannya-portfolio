@@ -49,160 +49,153 @@
     <p class="pd-hero__cat" data-i18n="proc.badge">Framework de trabalho</p>
     <h1 class="pd-hero__title" data-i18n="proc.title">Processo</h1>
     <p class="pd-hero__desc" data-i18n="proc.subtitle">Como eu penso</p>
-    <!-- PLACEHOLDER: 2–3 frases apresentando sua filosofia de trabalho — o que te diferencia, o que nunca abre mão, o tom geral da página -->
-    <p class="pd-hero__context">
-      [PLACEHOLDER: Breve intro — ex: "Processo não é burocracia. É o que separa uma entrega bonita de uma entrega que resolve. Aqui está como eu penso quando estou construindo produto."]
+    <p class="pd-hero__context pd-hero__context--bare">
+      Processo não é burocracia. É o que separa uma entrega bonita de uma entrega que resolve. Aqui está como eu penso quando estou construindo produto.
     </p>
   </header>
 
-  <!-- ETAPAS -->
-  <div class="pd-body container">
+  <!-- JORNADA -->
+  <div class="proc" id="proc">
 
-    <!-- 01 — Descoberta -->
-    <section class="proc-step reveal">
-      <div class="proc-step__head">
-        <span class="proc-step__num">01</span>
-        <h2 class="proc-step__title" data-i18n="proc.step1-title">Descoberta</h2>
-      </div>
-      <div class="proc-step__body">
-        <!-- PLACEHOLDER: Como você conduz a fase de descoberta.
-             Sugestão de pontos: métodos de pesquisa que usa (entrevistas, desk research, analytics),
-             como você valida que está investigando o problema certo, fontes de dados que confia. -->
-        <p class="pd-block__text">
-          [PLACEHOLDER: Descreva como você entra numa descoberta — quais perguntas faz primeiro, quais métodos usa (entrevistas, analytics, benchmarking) e como decide quando tem dados suficientes para avançar.]
-        </p>
-        <!-- Se houver uso de IA nesta etapa, descomente o bloco abaixo e preencha:
-        <div class="proc-ai">
-          <span class="proc-ai__label" data-i18n="proc.ai-label">IA no processo</span>
-          <p class="proc-ai__text">[PLACEHOLDER: Como você usa IA na descoberta — ex: síntese de entrevistas, clustering de insights, etc.]</p>
-        </div>
-        -->
-      </div>
-    </section>
-
-    <!-- 02 — Definição do problema -->
-    <section class="proc-step reveal">
-      <div class="proc-step__head">
-        <span class="proc-step__num">02</span>
-        <h2 class="proc-step__title" data-i18n="proc.step2-title">Definição do problema</h2>
-      </div>
-      <div class="proc-step__body">
-        <!-- PLACEHOLDER: Como você transforma dados de descoberta num problema bem definido.
-             Sugestão: frameworks que usa (HMW, POV, Jobs-to-be-Done), como prioriza,
-             critérios para saber que o problema está bem recortado. -->
-        <p class="pd-block__text">
-          [PLACEHOLDER: Descreva como você vai de "tenho dados" para "sei exatamente o que precisa ser resolvido" — ferramentas, critérios de priorização, como você articula o problema para o time.]
-        </p>
-        <!-- Etapa confirmada com uso de IA — preencha abaixo: -->
-        <div class="proc-ai">
-          <span class="proc-ai__label" data-i18n="proc.ai-label">IA no processo</span>
-          <p class="proc-ai__text">
-            [PLACEHOLDER: Como você usa IA na definição do problema — ex: geração de hipóteses, síntese de pesquisa, identificação de padrões nos dados.]
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 03 — Ideação ágil -->
-    <section class="proc-step reveal">
-      <div class="proc-step__head">
-        <span class="proc-step__num">03</span>
-        <h2 class="proc-step__title" data-i18n="proc.step3-title">Ideação ágil</h2>
-      </div>
-      <div class="proc-step__body">
-        <!-- PLACEHOLDER: Como você ideaciona — solo ou em equipe, ciclos curtos, MVP thinking.
-             Sugestão: como você decide o que é MVP vs. nice-to-have, como corta escopo sem
-             perder o núcleo da solução, como lida com a tensão entre agilidade e qualidade. -->
-        <p class="pd-block__text">
-          [PLACEHOLDER: Descreva sua abordagem de ideação — o que significa MVP pra você, como você cicla rápido entre ideias, como decide o que entra e o que sai da primeira versão.]
-        </p>
-        <!-- Se houver uso de IA nesta etapa, descomente:
-        <div class="proc-ai">
-          <span class="proc-ai__label" data-i18n="proc.ai-label">IA no processo</span>
-          <p class="proc-ai__text">[PLACEHOLDER: Como você usa IA na ideação.]</p>
-        </div>
-        -->
-      </div>
-    </section>
-
-    <!-- 04 — Prototipação -->
-    <section class="proc-step reveal">
-      <div class="proc-step__head">
-        <span class="proc-step__num">04</span>
-        <h2 class="proc-step__title" data-i18n="proc.step4-title">Prototipação</h2>
-      </div>
-      <div class="proc-step__body">
-        <!-- PLACEHOLDER: Seu critério para escolher o tipo de protótipo certo.
-             Sugestão: quando você faz wireframe vs. protótipo navegável vs. mockup visual,
-             como você calibra fidelidade com o objetivo do teste, ferramentas preferidas. -->
-        <p class="pd-block__text">
-          [PLACEHOLDER: Explique quando cada nível de fidelidade faz sentido — wireframe para validar fluxo, protótipo navegável para testar interação, mockup para aprovação visual — e como você decide o que usar em cada momento.]
-        </p>
-        <!-- Se houver uso de IA nesta etapa, descomente:
-        <div class="proc-ai">
-          <span class="proc-ai__label" data-i18n="proc.ai-label">IA no processo</span>
-          <p class="proc-ai__text">[PLACEHOLDER: Como você usa IA na prototipação.]</p>
-        </div>
-        -->
-      </div>
-    </section>
-
-    <!-- 05 — Teste & Iteração -->
-    <section class="proc-step reveal">
-      <div class="proc-step__head">
-        <span class="proc-step__num">05</span>
-        <h2 class="proc-step__title" data-i18n="proc.step5-title">Teste & Iteração</h2>
-      </div>
-      <div class="proc-step__body">
-        <!-- PLACEHOLDER: Como você testa com usuários reais.
-             Sugestão: métodos de teste preferidos (moderado, não-moderado, A/B),
-             como você define o que é "passou no teste", quantas rodadas faz antes de
-             decidir que está pronto para entregar. -->
-        <p class="pd-block__text">
-          [PLACEHOLDER: Descreva como você conduz testes com usuários — metodologia, número de participantes, o que observa, como transforma feedbacks em decisões de design.]
-        </p>
-        <!-- Se houver uso de IA nesta etapa, descomente:
-        <div class="proc-ai">
-          <span class="proc-ai__label" data-i18n="proc.ai-label">IA no processo</span>
-          <p class="proc-ai__text">[PLACEHOLDER: Como você usa IA em teste e iteração.]</p>
-        </div>
-        -->
-      </div>
-    </section>
-
-    <!-- 06 — Entrega & Aprendizado -->
-    <section class="proc-step reveal">
-      <div class="proc-step__head">
-        <span class="proc-step__num">06</span>
-        <h2 class="proc-step__title" data-i18n="proc.step6-title">Entrega & Aprendizado</h2>
-      </div>
-      <div class="proc-step__body">
-        <!-- PLACEHOLDER: O que acontece depois da entrega.
-             Sugestão: como você faz handoff para dev, o que documenta,
-             como você acompanha métricas pós-lançamento e transforma isso em aprendizado
-             para o próximo ciclo. -->
-        <p class="pd-block__text">
-          [PLACEHOLDER: Descreva o que entrega além das telas — documentação, handoff, acompanhamento de métricas — e como fecha o ciclo de aprendizado para a próxima iteração.]
-        </p>
-        <!-- Se houver uso de IA nesta etapa, descomente:
-        <div class="proc-ai">
-          <span class="proc-ai__label" data-i18n="proc.ai-label">IA no processo</span>
-          <p class="proc-ai__text">[PLACEHOLDER: Como você usa IA na entrega e documentação.]</p>
-        </div>
-        -->
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <div class="pd-cta reveal">
-      <a class="btn-pill" href="index.html#projetos" data-cursor data-cursor-label="Projetos" data-i18n="proc.cta">
-        Ver projetos
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
-      </a>
-      <a class="pd-cta__contact" href="index.html#contato" data-cursor data-i18n="pd.contact">Vamos conversar →</a>
+    <div class="proc-path" aria-hidden="true">
+      <div class="proc-path__fill" id="procPathFill"></div>
     </div>
 
-  </div>
+    <!-- 01 -->
+    <section class="proc-chapter" id="ch-0">
+      <span class="proc-chapter__ghost" aria-hidden="true">01</span>
+      <span class="proc-chapter__mark" aria-hidden="true"></span>
+      <div class="proc-chapter__inner">
+        <p class="proc-chapter__kicker">Etapa 01</p>
+        <h2 class="proc-chapter__title"><span data-i18n="proc.step1-title">Descoberta</span></h2>
+        <p class="proc-chapter__text">
+          Começa com uma combinação de tendências de mercado, pedidos de stakeholder e observação da jornada atual do usuário — buscando entender se ela realmente atende às necessidades reais ou se há um gap a melhorar. Nem sempre é sobre criar algo novo: às vezes é repensar uma jornada existente, inserindo ou retirando elementos com base no que os próprios usuários mostram.
+        </p>
+        <p class="proc-chapter__text">
+          A análise parte das métricas e da revisão da jornada já existente, combinada com contato direto com o time de Customer Success ou Suporte, que tem relacionamento real com o cliente e enxerga padrões valiosos do dia a dia. O objetivo é chegar a respostas que movam métricas de conversão ou metas de negócio — gerando mudança real tanto para o usuário quanto para o stakeholder. Os artefatos resultantes são relatório de pesquisa, mapa de empatia e jornada do usuário.
+        </p>
+        <div class="proc-ai">
+          <span class="proc-ai__label" data-i18n="proc.ai-label">IA no processo</span>
+          <p class="proc-ai__text">Não apliquei IA diretamente nesta etapa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 -->
+    <section class="proc-chapter" id="ch-1">
+      <span class="proc-chapter__ghost" aria-hidden="true">02</span>
+      <span class="proc-chapter__mark" aria-hidden="true"></span>
+      <div class="proc-chapter__inner">
+        <p class="proc-chapter__kicker">Etapa 02</p>
+        <h2 class="proc-chapter__title"><span data-i18n="proc.step2-title">Definição do problema</span></h2>
+        <p class="proc-chapter__text">
+          A análise parte diretamente do que gerou o problema — seja uma conversa com Suporte ou CS, seja a leitura da jornada do usuário no produto. A partir dos dados, identifico gaps no comportamento do cliente e oportunidades de simplificar a experiência, adicionando pontos de melhoria ao roadmap. Nem sempre significa desenvolver algo do zero: pequenos ajustes bem executados podem gerar mais engajamento do que grandes entregas.
+        </p>
+        <p class="proc-chapter__text">
+          A priorização é feita com base em como cada dor afeta o cliente de fato. Definida a ordem, a conversa com o time se estrutura dentro da trilha de scrum gerenciada pelo PM, que define próximos passos e prazos do projeto.
+        </p>
+        <div class="proc-ai">
+          <span class="proc-ai__label" data-i18n="proc.ai-label">IA no processo</span>
+          <p class="proc-ai__text">Não apliquei IA diretamente nesta etapa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 -->
+    <section class="proc-chapter" id="ch-2">
+      <span class="proc-chapter__ghost" aria-hidden="true">03</span>
+      <span class="proc-chapter__mark" aria-hidden="true"></span>
+      <div class="proc-chapter__inner">
+        <p class="proc-chapter__kicker">Etapa 03</p>
+        <h2 class="proc-chapter__title"><span data-i18n="proc.step3-title">Ideação ágil</span></h2>
+        <p class="proc-chapter__text">
+          Uma v1 só é lançada após um fluxo completo de validação: testes internos com protótipo de baixa fidelidade, validação com devs, designers e gerência, apresentação formal e lançamento controlado para alguns usuários reais. Só depois de tudo validado nas homologações internas é que parte para operação assistida.
+        </p>
+        <p class="proc-chapter__text">
+          Consigo pensar em soluções sozinha, mas reconheço valor real no brainstorm coletivo — o time traz visões diferentes de mercado e de produto. Quando os prazos apertam e isso não é possível, ainda assim busco garantir solidez e eficiência para o usuário final. Uma ideia sai da mesa quando não resolve a hipótese original que está sendo atacada, ou quando falta dado que sustente que ela é o caminho certo.
+        </p>
+        <div class="proc-ai">
+          <span class="proc-ai__label" data-i18n="proc.ai-label">IA no processo</span>
+          <p class="proc-ai__text">Não apliquei IA diretamente nesta etapa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 -->
+    <section class="proc-chapter" id="ch-3">
+      <span class="proc-chapter__ghost" aria-hidden="true">04</span>
+      <span class="proc-chapter__mark" aria-hidden="true"></span>
+      <div class="proc-chapter__inner">
+        <p class="proc-chapter__kicker">Etapa 04</p>
+        <h2 class="proc-chapter__title"><span data-i18n="proc.step4-title">Prototipação</span></h2>
+        <p class="proc-chapter__text">
+          Independente do prazo disponível, o objetivo é sempre entregar materiais de boa qualidade, ajustando o nível de detalhe conforme o tempo hábil — sem abrir mão da qualidade do que será avaliado, seja por time interno, stakeholder ou usuário final.
+        </p>
+        <p class="proc-chapter__text">
+          Figma é a ferramenta principal; Miro entra como apoio. Uso também Lovable e Claude Code para criar protótipos rápidos voltados a validações simples ou brainstorms, ajudando a tangibilizar ideias que no início parecem abstratas. A revisão sempre passa pelas heurísticas de usabilidade, com peso importante também para acessibilidade, considerando a diversidade de usuários — diferentes idades e pessoas com deficiência verbal ou não verbal. Nesta fase, já observo tempo de execução de tarefa e taxa de erro nos testes internos, mesmo sendo uma fase pré-lançamento.
+        </p>
+        <div class="proc-ai">
+          <span class="proc-ai__label" data-i18n="proc.ai-label">IA no processo</span>
+          <p class="proc-ai__text">Uso Lovable e Claude Code para prototipar hipóteses rapidamente. Quando a ideia ainda é abstrata, ter algo clicável em horas acelera a conversa com o time e antecipa problemas de fluxo antes mesmo de abrir o Figma.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 -->
+    <section class="proc-chapter" id="ch-4">
+      <span class="proc-chapter__ghost" aria-hidden="true">05</span>
+      <span class="proc-chapter__mark" aria-hidden="true"></span>
+      <div class="proc-chapter__inner">
+        <p class="proc-chapter__kicker">Etapa 05</p>
+        <h2 class="proc-chapter__title"><span data-i18n="proc.step5-title">Teste &amp; Iteração</span></h2>
+        <p class="proc-chapter__text">
+          Trabalho com testes moderados e não moderados, dependendo do projeto e do que faz mais sentido para a validação necessária. O número de participantes varia conforme o que o projeto e a empresa permitem em termos de tempo e acesso real a usuários.
+        </p>
+        <p class="proc-chapter__text">
+          Observo uma combinação de onde a pessoa hesita ou trava, comentários verbais espontâneos e tempo de execução da tarefa. A decisão de mudar o design depende mais da gravidade do problema do que da quantidade de relatos — e considera o perfil do usuário. Um problema relatado por poucos hard users pode não ter o mesmo peso que o mesmo problema relatado por muitos low users, o que pode indicar falta de intuitividade da ferramenta.
+        </p>
+        <div class="proc-ai">
+          <span class="proc-ai__label" data-i18n="proc.ai-label">IA no processo</span>
+          <p class="proc-ai__text">Não apliquei IA diretamente nesta etapa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 -->
+    <section class="proc-chapter" id="ch-5">
+      <span class="proc-chapter__ghost" aria-hidden="true">06</span>
+      <span class="proc-chapter__mark" aria-hidden="true"></span>
+      <div class="proc-chapter__inner">
+        <p class="proc-chapter__kicker">Etapa 06</p>
+        <h2 class="proc-chapter__title"><span data-i18n="proc.step6-title">Entrega &amp; Aprendizado</span></h2>
+        <p class="proc-chapter__text">
+          Além das telas, a entrega inclui documentação completa de handoff e atualização do Design System. O acompanhamento começa já na primeira semana após o lançamento: verifico se os usuários estão enfrentando problemas novos que não existiam antes da implementação, sempre com base em dados reais.
+        </p>
+        <p class="proc-chapter__text">
+          O fechamento do ciclo ainda não é um processo formal com repositório estruturado, mas é encarado como uma soft skill contínua: o aprendizado de cada projeto naturalmente vira legado e input para os próximos.
+        </p>
+        <div class="proc-ai">
+          <span class="proc-ai__label" data-i18n="proc.ai-label">IA no processo</span>
+          <p class="proc-ai__text">Não apliquei IA diretamente nesta etapa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL -->
+    <div class="proc-end" id="procEnd">
+      <div class="proc-end__orb" aria-hidden="true"></div>
+      <h2 class="proc-end__title">O ciclo não termina.</h2>
+      <p class="proc-end__sub">Cada entrega vira input para a próxima descoberta. É assim que o produto amadurece.</p>
+      <div class="proc-end__cta">
+        <a class="btn-pill" href="index.html#projetos" data-cursor data-cursor-label="Projetos" data-i18n="proc.cta">
+          Ver projetos
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+        <a class="pd-cta__contact" href="index.html#contato" data-cursor data-i18n="pd.contact">Vamos conversar →</a>
+      </div>
+    </div>
+
+  </div><!-- /proc -->
 
 </main>
 

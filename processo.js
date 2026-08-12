@@ -1,28 +1,60 @@
 /* ============================================================
    Página Processo — Hannya Cavalcante
-   Segue o mesmo padrão de projeto.js (sem dados de projeto)
    ============================================================ */
 (function () {
   "use strict";
 
   function el(id) { return document.getElementById(id); }
 
-  function initReveal() {
-    var els = document.querySelectorAll(".reveal");
-    if (!("IntersectionObserver" in window)) {
-      els.forEach(function (e) { e.classList.add("in-view"); });
+  function initJourney() {
+    var chapters = Array.prototype.slice.call(document.querySelectorAll(".proc-chapter"));
+    var end      = el("procEnd");
+    var pathFill = el("procPathFill");
+    var path     = document.querySelector(".proc-path");
+    var reduced  = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (!chapters.length) return;
+
+    if (reduced) {
+      chapters.forEach(function (c) { c.classList.add("is-lit"); });
+      if (end) end.classList.add("is-lit");
+      if (pathFill) pathFill.style.height = "100%";
       return;
     }
-    var io = new IntersectionObserver(function (entries) {
+
+    /* Acende cada capítulo ao entrar em cena */
+    var litIO = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add("in-view"); io.unobserve(e.target); }
+        if (e.isIntersecting) {
+          e.target.classList.add("is-lit");
+          litIO.unobserve(e.target);
+        }
       });
-    }, { threshold: 0.1, rootMargin: "0px 0px -6% 0px" });
-    els.forEach(function (e) { io.observe(e); });
+    }, { threshold: 0.15, rootMargin: "0px 0px -12% 0px" });
+
+    chapters.forEach(function (c) { litIO.observe(c); });
+    if (end) litIO.observe(end);
+
+    /* Trilha preenche conforme o scroll atravessa a jornada */
+    if (pathFill && path) {
+      var ticking = false;
+      function draw() {
+        var rect = path.getBoundingClientRect();
+        var mid  = window.innerHeight * 0.55;
+        var pct  = (mid - rect.top) / rect.height * 100;
+        pathFill.style.height = Math.max(0, Math.min(100, pct)) + "%";
+        ticking = false;
+      }
+      window.addEventListener("scroll", function () {
+        if (!ticking) { ticking = true; requestAnimationFrame(draw); }
+      }, { passive: true });
+      window.addEventListener("resize", draw, { passive: true });
+      draw();
+    }
   }
 
   function initTheme() {
-    var btn = el("themeToggle");
+    var btn  = el("themeToggle");
     var sun  = btn ? btn.querySelector(".icon-sun")  : null;
     var moon = btn ? btn.querySelector(".icon-moon") : null;
     function apply(theme) {
@@ -82,6 +114,6 @@
     initNav();
     initCursor();
     initYear();
-    initReveal();
+    initJourney();
   });
 })();
