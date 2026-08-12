@@ -15,21 +15,28 @@ window.PROJECTS_DATA = [
     year: "2025",
     role: "UX/UI Designer",
     duration: "Junho de 2023 – Março de 2025",
-    tools: ["Figma", "Design System", "Stark"],
+    tools: [
+      "Figma",
+      "Marvel App",
+      "Illustrator",
+      "Photoshop",
+      "Google Forms",
+      "Google Meet",
+    ],
     link: "https://www.behance.net/gallery/221760505/UX-UI-Case-Itau-EBAC",
-    linkLabel: "Ver no Behance",
+    linkLabel: "Ver case completo no Behance",
     context:
       "Case de estudo desenvolvido durante o curso de UX|UI da EBAC, usando o app do Itaú como objeto de análise. Não é um trabalho contratado pelo banco.",
     overview:
-      "Aplicativo bancário é um produto que as pessoas abrem com pressa e sob tensão: para pagar uma conta que vence hoje, para conferir se o dinheiro caiu, para transferir antes que a loja feche. Nesse contexto, cada elemento a mais na tela cobra um preço em atenção. Este case partiu dessa premissa para reimaginar os fluxos principais do app com foco em clareza, confiança e acessibilidade, indo da hierarquia de informação até os estados de erro e o feedback em tempo real.",
+      "Aplicativo bancário é um produto que as pessoas abrem com pressa e sob tensão: para pagar uma conta que vence hoje, para conferir se o dinheiro caiu, para transferir antes que a loja feche. Nesse contexto, cada elemento a mais na tela cobra um preço em atenção. Parti dessa premissa para redesenhar a experiência bancária do Itaú, conduzindo o projeto pelo Double Diamond: descoberta, definição, desenvolvimento e entrega, com a decisão de cada fase apoiada em dado e não em preferência.",
     challenge:
-      "As telas eram densas: saldo, atalhos, promoções e avisos disputavam o mesmo espaço, sem uma ordem que dissesse ao usuário para onde olhar primeiro. O efeito aparecia nas tarefas mais banais, justamente as de maior frequência, como transferir e consultar. Some-se a isso o público de um banco de varejo, que não é um recorte confortável: são todas as idades, todos os níveis de familiaridade com tecnologia e pessoas com deficiência usando leitor de tela. Contraste insuficiente, alvos de toque pequenos e ordem de leitura mal definida deixavam parte desse público de fora.",
+      "O app era complexo demais justamente para quem mais precisava dele. As telas eram densas, com saldo, atalhos, avisos e promoções disputando o mesmo espaço, sem uma ordem que dissesse ao usuário para onde olhar primeiro. O efeito aparecia nas tarefas mais banais, que são também as de maior frequência. E o público de um banco de varejo não é um recorte confortável: são todas as idades, todos os níveis de familiaridade com tecnologia e pessoas com deficiência usando leitor de tela. Contraste insuficiente, alvos de toque pequenos e ordem de leitura mal definida deixavam parte desse público de fora.",
     solution:
-      "Comecei estabelecendo uma hierarquia visual consistente, definindo o que é informação primária, o que é ação e o que é ruído que pode sair da tela. A partir dela montei um mini design system com componentes reaproveitáveis, para que a consistência não dependesse de disciplina manual a cada tela nova. Os fluxos críticos foram reescritos em etapas claras, cada uma com confirmação e feedback, para que o usuário sempre soubesse em que ponto estava e o que aconteceria a seguir. A acessibilidade entrou como critério de aprovação e não como revisão final: usei o Stark para validar contraste ainda dentro do Figma, dimensionei os alvos de toque e organizei a ordem de leitura pensando em quem navega por leitor de tela.",
+      "A pesquisa veio de questionário aplicado por Google Forms e de sessões conduzidas por Google Meet, e foi ela que definiu a persona e as prioridades do redesenho. A partir dos insights, estabeleci uma hierarquia visual que separa informação primária, ação e ruído, e a apliquei sobre a tipografia Itaú Display e a paleta da marca, mantendo a identidade do banco enquanto reduzia a carga cognitiva. Os fluxos críticos foram reescritos em etapas claras, cada uma com confirmação e feedback. A estrutura foi pensada para três plataformas, com wireframes de desktop, mobile e smartwatch, e o protótipo navegável foi montado no Marvel App para o teste com usuários reais. A acessibilidade entrou como critério de aprovação, não como revisão final: contraste, dimensionamento dos alvos de toque e ordem de leitura para leitor de tela.",
     results: [
-      { num: "AA", label: "conformidade de contraste WCAG" },
-      { num: "-30%", label: "etapas em fluxos críticos" },
-      { num: "100%", label: "componentes documentados no DS" },
+      { num: "3", label: "plataformas: desktop, mobile e smartwatch" },
+      { num: "4", label: "fases do Double Diamond documentadas" },
+      { num: "2", label: "métodos de pesquisa: questionário e sessões remotas" },
     ],
     gallery: ["assets/thumb-itau.jpg"],
   },
