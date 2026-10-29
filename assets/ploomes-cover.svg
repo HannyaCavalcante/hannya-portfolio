@@ -1,0 +1,83 @@
+<svg viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pipeline de CRM B2B representado de forma abstrata">
+  <defs>
+    <radialGradient id="pl-bg" cx="30%" cy="28%" r="85%">
+      <stop offset="0%" stop-color="#2A1150"/>
+      <stop offset="55%" stop-color="#190A33"/>
+      <stop offset="100%" stop-color="#0E0520"/>
+    </radialGradient>
+    <linearGradient id="pl-col" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B173FF" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#B173FF" stop-opacity="0.04"/>
+    </linearGradient>
+    <linearGradient id="pl-accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C79BFF"/>
+      <stop offset="100%" stop-color="#9747FF"/>
+    </linearGradient>
+    <filter id="pl-soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="34"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#pl-bg)"/>
+  <ellipse cx="300" cy="160" rx="300" ry="190" fill="#9747FF" opacity="0.20" filter="url(#pl-soft)"/>
+  <ellipse cx="960" cy="560" rx="260" ry="170" fill="#7F56D9" opacity="0.16" filter="url(#pl-soft)"/>
+
+  <!-- quatro colunas de pipeline, com cards avançando de estágio -->
+  <g transform="translate(150 132)">
+    <g fill="url(#pl-col)" stroke="#B173FF" stroke-opacity="0.26" stroke-width="1.5">
+      <rect x="0"   y="0" width="198" height="412" rx="18"/>
+      <rect x="226" y="0" width="198" height="412" rx="18"/>
+      <rect x="452" y="0" width="198" height="412" rx="18"/>
+      <rect x="678" y="0" width="198" height="412" rx="18"/>
+    </g>
+
+    <!-- cabeçalho de cada coluna -->
+    <g fill="#E9DCFF" opacity="0.55">
+      <rect x="22"  y="26" width="92"  height="10" rx="5"/>
+      <rect x="248" y="26" width="110" height="10" rx="5"/>
+      <rect x="474" y="26" width="78"  height="10" rx="5"/>
+      <rect x="700" y="26" width="96"  height="10" rx="5"/>
+    </g>
+
+    <!-- cards -->
+    <g>
+      <rect x="22"  y="62"  width="154" height="74" rx="13" fill="#2E1557" stroke="#B173FF" stroke-opacity="0.38" stroke-width="1.5"/>
+      <rect x="22"  y="152" width="154" height="74" rx="13" fill="#2E1557" stroke="#B173FF" stroke-opacity="0.30" stroke-width="1.5"/>
+      <rect x="22"  y="242" width="154" height="74" rx="13" fill="#2A1250" stroke="#B173FF" stroke-opacity="0.22" stroke-width="1.5"/>
+
+      <rect x="248" y="62"  width="154" height="74" rx="13" fill="#331A5E" stroke="#B173FF" stroke-opacity="0.40" stroke-width="1.5"/>
+      <rect x="248" y="152" width="154" height="74" rx="13" fill="#2E1557" stroke="#B173FF" stroke-opacity="0.28" stroke-width="1.5"/>
+
+      <!-- card em destaque: o que está sendo movido -->
+      <rect x="470" y="104" width="162" height="82" rx="14" fill="#44207C" stroke="url(#pl-accent)" stroke-width="2.5"/>
+      <rect x="490" y="126" width="84" height="9" rx="4.5" fill="#F0E6FF" opacity="0.9"/>
+      <rect x="490" y="146" width="116" height="8" rx="4" fill="#C79BFF" opacity="0.6"/>
+      <circle cx="616" cy="131" r="7" fill="#C79BFF"/>
+
+      <rect x="474" y="208" width="154" height="74" rx="13" fill="#2E1557" stroke="#B173FF" stroke-opacity="0.26" stroke-width="1.5"/>
+
+      <rect x="700" y="62"  width="154" height="74" rx="13" fill="#2E1557" stroke="#B173FF" stroke-opacity="0.30" stroke-width="1.5"/>
+    </g>
+
+    <!-- conteúdo esquemático dentro dos cards -->
+    <g fill="#CDB6F5" opacity="0.42">
+      <rect x="40"  y="80"  width="74"  height="8" rx="4"/>
+      <rect x="40"  y="98"  width="104" height="7" rx="3.5"/>
+      <rect x="40"  y="170" width="66"  height="8" rx="4"/>
+      <rect x="40"  y="188" width="96"  height="7" rx="3.5"/>
+      <rect x="40"  y="260" width="80"  height="8" rx="4"/>
+      <rect x="266" y="80"  width="84"  height="8" rx="4"/>
+      <rect x="266" y="98"  width="110" height="7" rx="3.5"/>
+      <rect x="266" y="170" width="70"  height="8" rx="4"/>
+      <rect x="492" y="226" width="88"  height="8" rx="4"/>
+      <rect x="718" y="80"  width="76"  height="8" rx="4"/>
+      <rect x="718" y="98"  width="100" height="7" rx="3.5"/>
+    </g>
+
+    <!-- trajetória do card entre estágios -->
+    <path d="M186 118 C 300 118, 340 145, 462 145" fill="none" stroke="url(#pl-accent)"
+          stroke-width="2.5" stroke-dasharray="9 9" opacity="0.75"/>
+    <path d="M640 145 C 700 145, 700 100, 692 100" fill="none" stroke="url(#pl-accent)"
+          stroke-width="2.5" stroke-dasharray="9 9" opacity="0.45"/>
+  </g>
+</svg>

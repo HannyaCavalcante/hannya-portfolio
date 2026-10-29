@@ -110,9 +110,11 @@ a { color: inherit; text-decoration: none; }
 .nav :focus-visible {
   outline-color: var(--primary);
 }
-/* O cursor customizado esconde o ponteiro nativo; ao navegar por teclado
-   devolvemos o cursor do sistema para não perder a referência visual. */
-html.has-fcursor:focus-within .fcursor { opacity: 0; }
+/* O cursor customizado esconde o ponteiro nativo, entao escondê-lo tambem
+   deixaria a tela sem cursor nenhum. Quem controla isso e o JavaScript, que
+   so o oculta ao navegar por teclado (Tab) e o traz de volta no primeiro
+   movimento do mouse, via a classe .fcursor.is-hidden.
+   Nao use :focus-within aqui: ele casa tambem com foco vindo de clique. */
 
 /* Link para pular a navegação (primeiro Tab da página) */
 .skip-link {
@@ -1093,19 +1095,23 @@ html.has-fcursor * { cursor: none !important; }
 /* ============================================================
    ENTRANCE ANIMATIONS
    ============================================================ */
-.reveal { opacity: 0; transform: translateY(34px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
-.reveal.in-view { opacity: 1; transform: none; }
-.reveal[data-delay="1"] { transition-delay: 0.08s; }
-.reveal[data-delay="2"] { transition-delay: 0.16s; }
-.reveal[data-delay="3"] { transition-delay: 0.24s; }
+/* As animacoes de entrada escondem o elemento ate o JavaScript marcar
+   .in-view. Por isso o estado escondido so vale sob .js, classe que um script
+   no <head> adiciona. Sem JavaScript a classe nunca aparece, nenhuma destas
+   regras se aplica e o conteudo e exibido normalmente. */
+.js .reveal { opacity: 0; transform: translateY(34px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+.js .reveal.in-view { opacity: 1; transform: none; }
+.js .reveal[data-delay="1"] { transition-delay: 0.08s; }
+.js .reveal[data-delay="2"] { transition-delay: 0.16s; }
+.js .reveal[data-delay="3"] { transition-delay: 0.24s; }
 
 /* Reveal direcionais & variações */
-.reveal--left { transform: translateX(-46px); }
-.reveal--right { transform: translateX(46px); }
-.reveal--zoom { transform: scale(0.9); }
-.reveal--blur { filter: blur(12px); transition: opacity 0.9s var(--ease), transform 0.9s var(--ease), filter 0.9s var(--ease); }
-.reveal--left.in-view, .reveal--right.in-view, .reveal--zoom.in-view { transform: none; }
-.reveal--blur.in-view { filter: blur(0); }
+.js .reveal--left { transform: translateX(-46px); }
+.js .reveal--right { transform: translateX(46px); }
+.js .reveal--zoom { transform: scale(0.9); }
+.js .reveal--blur { filter: blur(12px); transition: opacity 0.9s var(--ease), transform 0.9s var(--ease), filter 0.9s var(--ease); }
+.js .reveal--left.in-view, .js .reveal--right.in-view, .js .reveal--zoom.in-view { transform: none; }
+.js .reveal--blur.in-view { filter: blur(0); }
 
 /* Barra de progresso de scroll */
 .scroll-progress {
@@ -1186,7 +1192,8 @@ html.has-fcursor * { cursor: none !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; transition: none; }
+  /* mesma especificidade do estado escondido acima, senao esta regra perde */
+  .js .reveal { opacity: 1; transform: none; transition: none; }
 }
 
 /* ============================================================
@@ -1467,6 +1474,9 @@ html.has-fcursor * { cursor: none !important; }
   .pd-results { grid-template-columns: repeat(3, 1fr); }
 }
 
+/* Os estados escondidos abaixo dependem de .is-lit, adicionada pelo
+   JavaScript. Por isso vivem sob .js: sem JavaScript nada disso se aplica e a
+   pagina aparece inteira, estatica. */
 /* ============================================================
    PROCESSO — Editorial Journey
    ============================================================ */
@@ -1512,7 +1522,7 @@ html.has-fcursor * { cursor: none !important; }
 }
 
 /* Número fantasma gigante */
-.proc-chapter__ghost {
+.js .proc-chapter__ghost {
   position: absolute;
   left: clamp(16px, 5vw, 60px);
   top: clamp(30px, 6vh, 70px);
@@ -1576,7 +1586,7 @@ html.has-fcursor * { cursor: none !important; }
   margin-bottom: clamp(22px, 3vw, 34px);
   overflow: hidden;
 }
-.proc-chapter__title span {
+.js .proc-chapter__title span {
   display: block;
   transform: translateY(105%);
   transition: transform 0.95s 0.12s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1584,7 +1594,7 @@ html.has-fcursor * { cursor: none !important; }
 .proc-chapter.is-lit .proc-chapter__title span { transform: none; }
 
 /* Parágrafos com stagger */
-.proc-chapter__text {
+.js .proc-chapter__text {
   font-size: clamp(15px, 1.25vw, 18px);
   line-height: 1.72;
   color: var(--text-600);
@@ -1599,7 +1609,7 @@ html.has-fcursor * { cursor: none !important; }
 .proc-chapter.is-lit .proc-chapter__text:nth-of-type(2) { transition-delay: 0.38s; }
 
 /* Nota de IA — inline, sem caixa */
-.proc-ai {
+.js .proc-ai {
   position: relative;
   padding-left: 22px;
   margin-top: 26px;
@@ -1609,7 +1619,7 @@ html.has-fcursor * { cursor: none !important; }
               transform 0.8s 0.48s cubic-bezier(0.16,1,0.3,1);
 }
 .proc-chapter.is-lit .proc-ai { opacity: 1; transform: none; }
-.proc-ai::before {
+.js .proc-ai::before {
   content: '';
   position: absolute;
   left: 0; top: 4px; bottom: 4px;
@@ -1638,7 +1648,7 @@ html.has-fcursor * { cursor: none !important; }
 }
 
 /* ---- Final ---- */
-.proc-end {
+.js .proc-end {
   position: relative;
   text-align: center;
   padding: clamp(90px, 14vh, 170px) 20px 0;

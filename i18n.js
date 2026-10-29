@@ -11,10 +11,10 @@
       "nav.process":      "Processo",
       "nav.contact":      "Contato",
       "hero.badge":       "Olá!",
-      "hero.title":       'Eu sou Hannya,<br /><span class="br-accent">UX | UI Designer</span>',
-      "hero.quote":       "Designer de UX/UI especializada em criar interfaces intuitivas e estratégias de CRM. Com experiência em mais de 30 segmentos de mercado, ajudo empresas a transformarem a jornada de seus usuários em resultados reais.",
+      "hero.title":       'Eu sou Hannya,<br /><span class="br-accent">Product Designer</span>',
+      "hero.quote":       "Product Designer atuando em CRM SaaS B2B, onde desenho fluxos e interfaces que precisam servir ao time comercial do cliente sem quebrar a coerência do produto. Com experiência em mais de 30 segmentos de mercado, traduzo processo de negócio em produto que as pessoas usam todo dia.",
       "hero.cta":         "Entre em contato",
-      "hero.years":       "6 Anos",
+      "hero.years":       "5 Anos",
       "hero.years-sub":   "de experiência",
       "services.title":   "Meus Serviços",
       "services.desc":    "Criação de interfaces digitais centradas no usuário, focando em usabilidade, arquitetura de informação e prototipação de alta fidelidade, modernas e responsivas utilizando HTML, CSS e JavaScript, garantindo que o design seja fiel à implementação.",
@@ -25,7 +25,7 @@
       "exp.focus2":       "Foco: Projetos de interfaces para diversos segmentos, desde a pesquisa de usuário (UX Research) até o design visual e construção de Design Systems.",
       "exp.focus3":       "Foco: Desenvolvimento de identidades visuais e soluções gráficas com foco em comunicação estratégica e experiência de marca.",
       "impact.title":     "Vamos falar sobre impacto e experiência?",
-      "impact.text":      "Com uma base sólida em Design Gráfico e especialização em UX/UI pela EBAC, trago um olhar equilibrado entre estética e funcionalidade. Atualmente cursando Web Design na FIAP, busco a integração perfeita entre design e desenvolvimento. Meu foco é resolver problemas reais através da empatia, acessibilidade e visão estratégica.",
+      "impact.text":      "Com uma base sólida em Design Gráfico e especialização em UX/UI pela EBAC, trago um olhar equilibrado entre estética e funcionalidade. Formada em Tecnologia em Web Design pela FIAP, trabalho na fronteira entre design e desenvolvimento, o que encurta a distância entre o que desenho e o que chega em produção. Meu foco é resolver problemas reais através da empatia, acessibilidade e visão estratégica.",
       "impact.stat1-sfx": " Anos",
       "impact.stat1-lbl": "de experiência no mercado",
       "impact.stat2-sfx": " clientes",
@@ -37,6 +37,7 @@
       "contact.ph":       "Digite seu e-mail para iniciar a conversa",
       "contact.send":     "Enviar",
       "contact.badge":    "UX/UI Designer Certificada — EBAC",
+      "footer.role":      "Product Designer",
       "footer.copy":      "Todos os direitos reservados.",
       "pd.back":          "Voltar aos projetos",
       "pd.overview":      "Visão geral",
@@ -75,10 +76,10 @@
       "nav.process":      "Process",
       "nav.contact":      "Contact",
       "hero.badge":       "Hello!",
-      "hero.title":       'I\'m Hannya,<br /><span class="br-accent">UX | UI Designer</span>',
-      "hero.quote":       "UX/UI Designer specialized in creating intuitive interfaces and CRM strategies. With experience across 30+ market segments, I help companies transform their users' journey into real results.",
+      "hero.title":       'I\'m Hannya,<br /><span class="br-accent">Product Designer</span>',
+      "hero.quote":       "Product Designer working in B2B SaaS CRM, designing the flows and interfaces that have to serve each client's sales team without breaking the product's coherence. With experience across 30+ market segments, I turn business process into a product people use every day.",
       "hero.cta":         "Contact me",
-      "hero.years":       "6 Years",
+      "hero.years":       "5 Years",
       "hero.years-sub":   "of experience",
       "services.title":   "My Services",
       "services.desc":    "Creation of user-centered digital interfaces, focusing on usability, information architecture and high-fidelity prototyping, modern and responsive using HTML, CSS and JavaScript, ensuring design fidelity to implementation.",
@@ -89,7 +90,7 @@
       "exp.focus2":       "Focus: Interface design projects across multiple segments, from UX Research to visual design and Design Systems.",
       "exp.focus3":       "Focus: Development of visual identities and graphic solutions focused on strategic communication and brand experience.",
       "impact.title":     "Let's talk about impact and experience?",
-      "impact.text":      "With a solid background in Graphic Design and UX/UI specialization at EBAC, I bring a balanced eye for aesthetics and functionality. Currently studying Web Design at FIAP, I pursue the perfect integration between design and development. My focus is on solving real problems through empathy, accessibility, and strategic vision.",
+      "impact.text":      "With a solid background in Graphic Design and UX/UI specialization at EBAC, I bring a balanced eye for aesthetics and functionality. Holding a degree in Web Design Technology from FIAP, I work at the border between design and development, which shortens the distance between what I design and what actually ships. My focus is on solving real problems through empathy, accessibility, and strategic vision.",
       "impact.stat1-sfx": " Years",
       "impact.stat1-lbl": "of market experience",
       "impact.stat2-sfx": " clients",
@@ -101,6 +102,7 @@
       "contact.ph":       "Enter your email to start the conversation",
       "contact.send":     "Send",
       "contact.badge":    "Certified UX/UI Designer — EBAC",
+      "footer.role":      "Product Designer",
       "footer.copy":      "All rights reserved.",
       "pd.back":          "Back to projects",
       "pd.overview":      "Overview",
@@ -164,7 +166,15 @@
 
     document.querySelectorAll("[data-i18n-suffix]").forEach(function (el) {
       var k = el.getAttribute("data-i18n-suffix");
-      if (t[k] != null) el.setAttribute("data-suffix", t[k]);
+      if (t[k] == null) return;
+      el.setAttribute("data-suffix", t[k]);
+      // O valor final ja vem escrito no HTML (em PT) para a pagina funcionar
+      // sem JavaScript. Ao trocar de idioma reescrevemos o texto aqui, senao o
+      // sufixo traduzido so apareceria quando a contagem animada rodasse.
+      if (el.hasAttribute("data-count")) {
+        el.textContent = (el.getAttribute("data-prefix") || "") +
+                         el.getAttribute("data-count") + t[k];
+      }
     });
 
     updateToggles(lang);

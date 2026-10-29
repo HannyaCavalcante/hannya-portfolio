@@ -109,8 +109,23 @@
     var label = el("fcursorLabel");
     if (!cur) return;
     if (window.matchMedia("(pointer: coarse)").matches) { cur.style.display = "none"; return; }
-    document.documentElement.classList.add("has-fcursor");
+    // O cursor nativo so e escondido no primeiro movimento do mouse, quando
+    // finalmente sabemos onde ele esta. Escondendo antes disso a tela ficava
+    // sem cursor nenhum ate a pessoa mexer o mouse, porque o cursor falso
+    // nasce parado no canto superior esquerdo. Isso acontecia a cada
+    // carregamento e a cada navegacao entre paginas.
+    cur.classList.add("is-hidden");
+
+    // Navegacao por teclado: o cursor falso fica parado onde o mouse parou e
+    // so atrapalha, entao o escondemos no Tab e o trazemos de volta no
+    // primeiro movimento do mouse. Nao use :focus-within no CSS para isso:
+    // aquele seletor casa tambem com foco vindo de clique.
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Tab") cur.classList.add("is-hidden");
+    });
     window.addEventListener("mousemove", function (e) {
+      document.documentElement.classList.add("has-fcursor");
+      cur.classList.remove("is-hidden");
       cur.style.transform = "translate(" + (e.clientX - 3) + "px, " + (e.clientY - 2) + "px)";
     });
     document.addEventListener("mouseleave", function () { cur.classList.add("is-hidden"); });
