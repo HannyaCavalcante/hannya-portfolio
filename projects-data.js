@@ -48,6 +48,8 @@ window.PROJECTS_DATA = [
       "assets/bench-hubspot.jpg",
       "assets/bench-pipedrive.jpg",
     ],
+    nota:
+      "Este case está em andamento. A descoberta terminou e a ideação começou. As próximas entregas são os wireframes de baixa fidelidade com várias opções por tela, a classificação de cada tipo de aviso entre crítico, sensível ao tempo e passivo, e a validação das métricas com dados de uso e NPS. Atualizo esta página conforme o estudo avança.",
     results: [
       { num: "13/15", label: "avisos no painel vinham de automação, não de pessoas" },
       { num: "8", label: "dores priorizadas por RICE, com evidência de entrevista" },

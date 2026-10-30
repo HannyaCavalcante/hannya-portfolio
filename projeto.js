@@ -86,6 +86,12 @@
       el("pdResultsBlock").hidden = true;
     }
 
+    /* nota de fechamento, para case que ainda nao acabou */
+    if (p.nota) {
+      el("pdNotaBlock").hidden = false;
+      el("pdNota").textContent = p.nota;
+    }
+
     /* gallery */
     if (p.gallery && p.gallery.length) {
       el("pdGalleryBlock").hidden = false;
