@@ -89,6 +89,11 @@
     /* gallery */
     if (p.gallery && p.gallery.length) {
       el("pdGalleryBlock").hidden = false;
+      // titulo proprio quando a galeria nao e de telas do projeto
+      if (p.galleryTitle) {
+        var tg = el("pdGalleryBlock").querySelector(".pd-block__title");
+        if (tg) { tg.removeAttribute("data-i18n"); tg.textContent = p.galleryTitle; }
+      }
       el("pdGallery").innerHTML = p.gallery
         .map(function (src) {
           return '<figure class="pd-shot"><img src="' + src + '" alt="' + p.name + '" loading="lazy" /></figure>';

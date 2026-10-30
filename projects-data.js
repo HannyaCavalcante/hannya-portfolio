@@ -4,39 +4,54 @@
    ============================================================ */
 window.PROJECTS_DATA = [
   {
-    id: "ploomes",
-    resumo: {
-      desafio: "Todo aviso chega igual, seja crítico ou apenas informativo, e a triagem sobra para a pessoa várias vezes por dia.",
-      solucao: "Discovery com entrevistas pelo Teste da Mãe, benchmark documentado e classificação dos avisos por urgência.",
-    },
+    id: "notificacoes-crm",
+    name: "Notificações em CRM B2B (Case)",
+    category: "Product Design · Discovery",
     tag: "CRM B2B",
     wip: true,
-    name: "Notificações Ploomes (Case)",
-    category: "Product Design · Discovery",
-    desc: "Discovery sobre a aba de Notificações e Tarefas de um CRM B2B. Começou nas notificações e chegou às tarefas: a confiança no aviso é o que sustenta a confiança na tarefa. Estudo em andamento.",
+    desc: "Os avisos do produto são silenciosos e se acumulam, e a rotina do dia acaba se organizando fora dele. Discovery com entrevistas, benchmark e priorização RICE. Estudo em andamento.",
     variant: "dark",
-    cover: "assets/ploomes-cover.svg",
+    cover: "assets/crm-cover.svg",
     hideName: false,
     year: "2026",
     role: "Discovery conduzido por mim, em mentoria de Product Design",
     duration: "Outubro de 2026 – em andamento",
     tools: [
-      "Figma",
       "Double Diamond",
       "O Teste da Mãe",
       "Entrevistas",
       "Benchmark",
-      "IA",
+      "RICE",
+      "Figma",
+      "Claude",
     ],
+    resumo: {
+      desafio: "O painel de avisos acumula mais automação do que gente: 13 dos 15 itens visíveis não vinham de pessoas, e não há como filtrar.",
+      solucao: "Três entrevistas pelo Teste da Mãe, benchmark de quatro CRMs e do iOS, e oito dores priorizadas por RICE.",
+    },
     context:
-      "Ploomes (Grupo Sankhya), CRM SaaS B2B. Case sobre um problema real do produto, identificado no uso cotidiano da plataforma, e não um exercício hipotético. Conduzido dentro de uma mentoria de Product Design, com o Double Diamond guiando as fases. Está em andamento: a fase de descoberta terminou, a de ideação não. Nenhum cliente, dado de conta ou pessoa entrevistada é identificado.",
+      "Case sobre um problema real de produto num CRM SaaS B2B em que atuo, identificado no uso cotidiano e não um exercício hipotético. Conduzido dentro de uma mentoria de Product Design, com o Double Diamond guiando as fases. Está em andamento: a descoberta terminou, a ideação não. Por discrição, o produto não é identificado, nenhum cliente aparece e as pessoas entrevistadas são referidas apenas pela área em que atuam.",
     overview:
-      "Notificação é uma promessa: isto aqui merece sua atenção agora. Quando o produto quebra essa promessa algumas vezes, a pessoa para de olhar, e a partir daí o aviso vira ruído mesmo quando está certo. Comecei este estudo pela aba de Notificações, mas os insumos mostraram que o problema não para ali: ele chega às Tarefas, porque é a confiança no aviso que sustenta a confiança na tarefa. Quem não acredita no sino também não acredita na lista.",
-      challenge:
-      "Hoje todo aviso chega do mesmo jeito, seja ele crítico, sensível ao tempo ou apenas informativo, e cabe à pessoa fazer essa triagem sozinha, várias vezes por dia. Isso pesa diferente para cada perfil: quem gerencia projeto, quem atende suporte, quem cuida de arquitetura de CPQ e quem opera logs de integração não precisam das mesmas coisas nem no mesmo momento. As entrevistas trouxeram sintomas concretos, como status de tarefa que não batia com a realidade e gente migrando a própria rotina para o Google Calendar. Quando alguém leva o trabalho para fora da ferramenta, a ferramenta já perdeu. O desafio não é notificar mais, é separar o que merece interromper do que pode esperar.",
+      "O ponto de partida era vago: havia relato de que as notificações eram ruins, sem nada além disso. Fui ouvir quem vive a aba, e o achado coube em uma frase: os avisos são silenciosos e se acumulam, então a rotina do dia acaba se organizando fora do produto. Comecei pelas notificações e os insumos levaram às tarefas, porque quando o aviso falha a tarefa perde a confiança junto. Notificação é uma promessa de que aquilo merece atenção agora. Quebrada algumas vezes, a pessoa para de olhar, e aí o aviso vira ruído mesmo quando está certo.",
+    challenge:
+      "A evidência mais clara apareceu numa tela compartilhada durante a entrevista: dos 15 avisos visíveis no painel, 13 vinham de integrações e automações e apenas 2 de pessoas. O filtro disponível separa lidas de não lidas, mas não dá para filtrar por origem nem limpar o histórico. Pelo Teste da Mãe, o sinal mais forte de problema real não é a reclamação e sim o contorno, e todas as pessoas entrevistadas já tinham construído o seu: migraram a organização do dia para o calendário externo, desligaram lembretes que chegavam em excesso, passaram a usar tipo de tarefa como etiqueta de cor improvisada e levaram os avisos importantes para ferramentas de fora. Quando alguém gasta esforço para contornar, o problema já custou mais do que uma reclamação registrada.",
     solution:
-      "A descoberta foi feita com entrevistas seguindo O Teste da Mãe, com pessoas de suporte, arquitetura de CPQ e gerência de projetos. O roteiro busca fato sobre o comportamento passado, não opinião sobre funcionalidade futura, justamente para não colher elogio educado. Em paralelo, montei um benchmark de CRMs e do iOS documentado no Figma, com print e anotação, para servir de referência ao time. A primeira versão de alta fidelidade cobriu painel do sino, preferências, alerta e as visões de dia, mês e lista. A mentoria redirecionou o caminho a partir dali: voltar para wireframe de baixa fidelidade com várias opções por tela antes de fechar qualquer visual, divergir mais antes de convergir, e quantificar cada dor por quantas pessoas citaram e de qual perfil, em vez de tratar todo relato com o mesmo peso. É onde o estudo está agora. As próximas frentes são classificar todos os tipos de notificação que existem no sistema entre crítica, sensível ao tempo e passiva, e fechar as métricas que vão dizer se a solução funcionou: tempo até abrir a notificação, engajamento, menções no suporte e NPS.",
+      "Conduzi o discovery pelo Double Diamond, do descobrir ao MVP. O roteiro seguiu O Teste da Mãe e foi revisado com outra designer: perguntas sobre o passado em vez de opinião sobre o futuro, sem apresentar hipótese nem solução, com silêncio em vez de completar a fala. Em vez de perguntar se um resumo diário ajudaria, eu perguntava como a pessoa acompanha o que mudou no dia. Foram três conversas, uma ao vivo e duas por chat, com Suporte, Arquitetura de CPQ e Gerência de projetos, num funil de seis blocos em 27 minutos. O benchmark cobriu quatro CRMs e o iOS, documentado com print e anotação para servir de referência ao time. Fechei com oito dores priorizadas por RICE, e o painel de avisos lidera com folga: alto impacto e menor esforço. As próximas frentes são wireframes de baixa fidelidade com várias opções por tela, classificar cada tipo de aviso entre crítico, sensível ao tempo e passivo, e validar as métricas que dirão se funcionou: tarefas concluídas dentro do produto, clique nas notificações, contas com integração de calendário ativa e uso semanal de quem desliga os avisos.",
+    galleryTitle: "Benchmark: como outros produtos avisam",
+    gallery: [
+      "assets/bench-salesforce.jpg",
+      "assets/bench-dynamics.jpg",
+      "assets/bench-hubspot.jpg",
+      "assets/bench-pipedrive.jpg",
+    ],
+    results: [
+      { num: "13/15", label: "avisos no painel vinham de automação, não de pessoas" },
+      { num: "8", label: "dores priorizadas por RICE, com evidência de entrevista" },
+      { num: "5", label: "produtos no benchmark: quatro CRMs e o iOS" },
+    ],
   },
+
+
   {
     id: "itau",
     resumo: {
