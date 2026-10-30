@@ -43,6 +43,19 @@
         return '<div class="pd-meta__item"><span class="pd-meta__k" data-i18n="' + m[0] + '"></span><span class="pd-meta__v">' + m[1] + "</span></div>";
       })
       .join("");
+    /* resumo em 4 colunas */
+    if (p.resumo) {
+      el("pdSummary").hidden = false;
+      el("pdSumChallenge").textContent = p.resumo.desafio || "";
+      el("pdSumSolve").textContent = p.resumo.solucao || "";
+      el("pdSumRole").textContent = p.role || "";
+      el("pdSumDuration").textContent = p.duration || "";
+      var pills = "";
+      if (p.tag) pills += '<span class="pd-summary__pill">' + p.tag + "</span>";
+      if (p.wip) pills += '<span class="pd-summary__pill pd-summary__pill--wip">Em andamento</span>';
+      el("pdSummaryPills").innerHTML = pills;
+    }
+
     if (window.HC_I18N) window.HC_I18N.apply(window.HC_I18N.getLang());
 
     /* cover */

@@ -5,6 +5,10 @@
 window.PROJECTS_DATA = [
   {
     id: "ploomes",
+    resumo: {
+      desafio: "Todo aviso chega igual, seja crítico ou apenas informativo, e a triagem sobra para a pessoa várias vezes por dia.",
+      solucao: "Discovery com entrevistas pelo Teste da Mãe, benchmark documentado e classificação dos avisos por urgência.",
+    },
     tag: "CRM B2B",
     wip: true,
     name: "Notificações Ploomes (Case)",
@@ -35,6 +39,10 @@ window.PROJECTS_DATA = [
   },
   {
     id: "itau",
+    resumo: {
+      desafio: "Onboarding denso de um banco de varejo, com público de todas as idades e níveis de familiaridade com tecnologia.",
+      solucao: "Double Diamond com pesquisa, hierarquia visual refeita e acessibilidade como critério de aprovação, não revisão final.",
+    },
     tag: "Banco",
     name: "Redesign de Onboarding · Itaú",
     category: "Case acadêmico · Setor bancário",
@@ -73,6 +81,10 @@ window.PROJECTS_DATA = [
   },
   {
     id: "tasker",
+    resumo: {
+      desafio: "Excesso de estímulos digitais alimenta um ciclo de distração que afeta desempenho acadêmico e profissional.",
+      solucao: "Double Diamond de ponta a ponta, com persona, matriz CSD, benchmarking de 5 apps e protótipo navegável.",
+    },
     tag: "Produtividade",
     name: "Tasker",
     category: "Product Design · Produtividade",
@@ -106,6 +118,10 @@ window.PROJECTS_DATA = [
   },
   {
     id: "reuse",
+    resumo: {
+      desafio: "Itens parados em casa viram descarte, e faltava no Brasil uma plataforma focada em troca e doação.",
+      solucao: "App mobile-first com Design System próprio, três tipos de oferta no mesmo fluxo e progressão gamificada.",
+    },
     tag: "Economia circular",
     name: "Reuse App",
     category: "UX/UI · Economia Circular",
@@ -144,6 +160,10 @@ window.PROJECTS_DATA = [
   },
   {
     id: "casa-vira-lata",
+    resumo: {
+      desafio: "Adoção travava em formulários longos, falta de informação sobre os animais e pouca confiança entre as partes.",
+      solucao: "Fluxos curtos e guiados, perfis ricos com histórico de saúde e mensagens diretas entre adotante e protetor.",
+    },
     tag: "Causa animal",
     name: "Casa do Vira-Lata",
     category: "UX/UI · Causa Animal",

@@ -62,6 +62,31 @@
       <div class="pd-meta" id="pdMeta"></div>
     </header>
 
+    <!-- Resumo em 4 colunas: da para entender o case antes de rolar -->
+    <div class="pd-summary container" id="pdSummary" hidden>
+      <div class="pd-summary__card">
+        <div class="pd-summary__pills" id="pdSummaryPills"></div>
+        <div class="pd-summary__grid">
+          <div class="pd-summary__col">
+            <h2 class="pd-summary__k" data-i18n="pd.sum.challenge">desafio</h2>
+            <p class="pd-summary__v" id="pdSumChallenge"></p>
+          </div>
+          <div class="pd-summary__col">
+            <h2 class="pd-summary__k" data-i18n="pd.sum.solve">como resolvi</h2>
+            <p class="pd-summary__v" id="pdSumSolve"></p>
+          </div>
+          <div class="pd-summary__col">
+            <h2 class="pd-summary__k" data-i18n="pd.sum.role">meu papel</h2>
+            <p class="pd-summary__v" id="pdSumRole"></p>
+          </div>
+          <div class="pd-summary__col">
+            <h2 class="pd-summary__k" data-i18n="pd.sum.duration">duração</h2>
+            <p class="pd-summary__v" id="pdSumDuration"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- COVER -->
     <div class="pd-cover container" id="pdCoverWrap">
       <div class="pd-cover__inner" id="pdCover"></div>

@@ -783,7 +783,7 @@ section { position: relative; }
   color: var(--text-900);
   background: rgba(255, 255, 255, 0.92);
   border-radius: 999px;
-  padding: 6px 12px;
+  padding: 8px 12px;
   white-space: nowrap;
 }
 /* Em andamento: pilula roxa com ponto pulsando, para o case nao se passar
@@ -807,12 +807,16 @@ section { position: relative; }
 @media (prefers-reduced-motion: reduce) {
   .project__pill--wip::before { animation: none; }
 }
+/* O scrim do card e transparente no topo, onde a seta fica, entao ela
+   precisa garantir o proprio contraste: capas claras (Itau) sumiam com
+   seta branca sobre fundo branco translucido. */
 .project__arrow {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.18);
-  backdrop-filter: blur(6px);
+  background: rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.28);
+  backdrop-filter: blur(8px);
   display: grid;
   place-items: center;
   color: #fff;
@@ -2043,4 +2047,71 @@ html.has-fcursor * { cursor: none !important; }
   .value-grid { grid-template-columns: 1fr; gap: 16px; }
   .about__sub { margin: 48px 0 24px; }
   .value-card { padding: 24px; }
+}
+
+/* ============================================================
+   RESUMO DO CASE EM 4 COLUNAS
+   ============================================================ */
+.pd-summary { margin-bottom: clamp(32px, 4vw, 56px); }
+.pd-summary__card {
+  background: color-mix(in srgb, var(--surface-soft) 80%, var(--bg));
+  border: 1px solid color-mix(in srgb, var(--text-400) 16%, transparent);
+  border-radius: 24px;
+  padding: clamp(24px, 3vw, 40px);
+}
+.pd-summary__pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.pd-summary__pill {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-900);
+  background: var(--bg);
+  border: 1px solid color-mix(in srgb, var(--text-400) 24%, transparent);
+  border-radius: 999px;
+  padding: 8px 12px;
+}
+.pd-summary__pill--wip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  background: var(--primary-strong);
+  border-color: var(--primary-strong);
+}
+.pd-summary__pill--wip::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  animation: wipPulse 1.8s ease-in-out infinite;
+}
+.pd-summary__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+.pd-summary__k {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: clamp(15px, 1.3vw, 18px);
+  color: var(--text-900);
+  margin-bottom: 12px;
+}
+.pd-summary__v {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: clamp(13px, 1.05vw, 15px);
+  line-height: 1.55;
+  color: var(--text-600);
+}
+
+@media (max-width: 900px) {
+  .pd-summary__grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+}
+@media (max-width: 560px) {
+  .pd-summary__grid { grid-template-columns: 1fr; gap: 20px; }
+  .pd-summary__card { border-radius: 20px; }
 }
