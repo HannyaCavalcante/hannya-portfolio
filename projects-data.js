@@ -37,8 +37,12 @@ window.PROJECTS_DATA = [
       "A evidência mais clara apareceu numa tela compartilhada durante a entrevista: dos 15 avisos visíveis no painel, 13 vinham de integrações e automações e apenas 2 de pessoas. O filtro disponível separa lidas de não lidas, mas não dá para filtrar por origem nem limpar o histórico. Pelo Teste da Mãe, o sinal mais forte de problema real não é a reclamação e sim o contorno, e todas as pessoas entrevistadas já tinham construído o seu: migraram a organização do dia para o calendário externo, desligaram lembretes que chegavam em excesso, passaram a usar tipo de tarefa como etiqueta de cor improvisada e levaram os avisos importantes para ferramentas de fora. Quando alguém gasta esforço para contornar, o problema já custou mais do que uma reclamação registrada.",
     solution:
       "Conduzi o discovery pelo Double Diamond, do descobrir ao MVP. O roteiro seguiu O Teste da Mãe e foi revisado com outra designer: perguntas sobre o passado em vez de opinião sobre o futuro, sem apresentar hipótese nem solução, com silêncio em vez de completar a fala. Em vez de perguntar se um resumo diário ajudaria, eu perguntava como a pessoa acompanha o que mudou no dia. Foram três conversas, uma ao vivo e duas por chat, com Suporte, Arquitetura de CPQ e Gerência de projetos, num funil de seis blocos em 27 minutos. O benchmark cobriu quatro CRMs e o iOS, documentado com print e anotação para servir de referência ao time. Fechei com oito dores priorizadas por RICE, e o painel de avisos lidera com folga: alto impacto e menor esforço. As próximas frentes são wireframes de baixa fidelidade com várias opções por tela, classificar cada tipo de aviso entre crítico, sensível ao tempo e passivo, e validar as métricas que dirão se funcionou: tarefas concluídas dentro do produto, clique nas notificações, contas com integração de calendário ativa e uso semanal de quem desliga os avisos.",
-    galleryTitle: "Benchmark: como outros produtos avisam",
+    galleryTitle: "Do roteiro à priorização, e o benchmark que apoiou as decisões",
     gallery: [
+      "assets/disc-roteiro.jpg",
+      "assets/disc-testedamae.jpg",
+      "assets/disc-rice.jpg",
+      "assets/disc-hmw.jpg",
       "assets/bench-salesforce.jpg",
       "assets/bench-dynamics.jpg",
       "assets/bench-hubspot.jpg",
