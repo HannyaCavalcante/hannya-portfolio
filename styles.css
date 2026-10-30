@@ -559,16 +559,23 @@ section { position: relative; }
   margin: 0 auto clamp(48px, 6vw, 80px);
   max-width: 16ch;
 }
+/* Cada cargo e uma linha propria em grid, entao titulo, no e texto sempre
+   comecam na mesma altura. Antes as tres colunas eram pilhas flex
+   independentes com gaps diferentes, e as linhas iam se desencontrando: o
+   desvio chegava a 74px com tres cargos e a 130px com quatro. */
 .timeline {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.timeline__row {
   display: grid;
   grid-template-columns: 1fr 48px 1fr;
   gap: clamp(28px, 5vw, 80px);
-  text-align: left;
-  align-items: stretch;
+  align-items: start;
+  padding-bottom: clamp(44px, 6vw, 88px);
 }
-.timeline__col { display: flex; flex-direction: column; }
-.timeline__roles { gap: clamp(48px, 7vw, 102px); }
-.timeline__focus { gap: clamp(28px, 4vw, 48px); }
+.timeline__row:last-child { padding-bottom: 0; }
 .role-title {
   font-family: var(--font-body);
   font-weight: 700;
@@ -584,23 +591,25 @@ section { position: relative; }
   line-height: 1.25;
   color: var(--text-400);
 }
+/* O trilho ocupa a altura inteira da linha: o no no topo e o tracejado
+   preenchendo o resto ate a linha seguinte. A ultima linha nao tem tracejado. */
 .timeline__rail {
-  position: relative;
+  grid-column: 2;
+  align-self: stretch;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  gap: 8px;
+  min-height: 48px;
 }
-.timeline__rail::before {
+.timeline__rail::after {
   content: "";
-  position: absolute;
-  top: 24px;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
+  flex: 1;
   border-left: 3px dashed var(--text-800);
 }
+.timeline__row:last-child .timeline__rail::after { display: none; }
 .rail-node {
+  flex: 0 0 auto;
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -1446,29 +1455,22 @@ html.has-fcursor * { cursor: none !important; }
   .services__grid { grid-template-columns: 1fr; max-width: 560px; margin-inline: auto; }
   .impact__inner { grid-template-columns: 1fr; }
   .impact__photo { max-width: 420px; margin-inline: auto; }
-  .timeline {
-    grid-template-columns: 48px 1fr;
-    grid-template-rows: auto;
-    gap: 16px 20px;
+  /* No mobile cada linha vira trilho a esquerda e, a direita, titulo em cima
+     do texto. O no e o tracejado continuam ocupando a altura toda da linha. */
+  .timeline__row {
+    grid-template-columns: 40px 1fr;
+    gap: 4px 16px;
+    padding-bottom: 32px;
   }
-  .timeline__roles {
-    grid-column: 2;
-    grid-row: 1;
-    gap: 40px;
-  }
+  .timeline__row .role-title { grid-column: 2; grid-row: 1; }
+  .timeline__row .focus-text { grid-column: 2; grid-row: 2; }
   .timeline__rail {
     grid-column: 1;
     grid-row: 1 / 3;
-    flex-direction: column;
-    justify-content: space-between;
-    align-self: stretch;
+    min-height: 40px;
   }
-  .timeline__focus {
-    grid-column: 2;
-    grid-row: 2;
-    gap: 28px;
-  }
-  .timeline__col { margin-bottom: 0; }
+  .rail-node { width: 40px; height: 40px; }
+  .rail-node span { width: 28px; height: 28px; }
   .project { flex: 0 0 100%; }
   .proj-grid { grid-template-columns: 1fr; }
   .pd-results { grid-template-columns: repeat(3, 1fr); }

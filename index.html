@@ -172,22 +172,36 @@
     <h2 class="exp__title reveal" data-i18n="exp.title">Minha Experiência Profissional</h2>
 
     <div class="timeline">
-      <div class="timeline__col timeline__roles">
-        <div class="role-title reveal" data-i18n-html="exp.role1">Implementação de<br />CRM &amp; UX Design</div>
-        <div class="role-title reveal" data-delay="1">UX/UI &amp; Digital</div>
-        <div class="role-title reveal" data-delay="2" data-i18n-html="exp.role3">Designer Gráfico &amp;<br />de Interfaces</div>
+      <div class="timeline__row">
+        <div class="role-title reveal" data-i18n-html="exp.role-impl">UX Analista de<br />Implementação</div>
+        <div class="timeline__rail">
+          <div class="rail-node reveal"><span></span></div>
+        </div>
+        <p class="focus-text reveal" data-i18n="exp.focus-impl">Foco: Estruturação de fluxos de trabalho e configuração do Ploomes CRM conforme as regras de negócio de cada cliente, identificando melhorias de experiência, padronizando layouts e documentos comerciais e reduzindo retrabalho junto a times multidisciplinares.</p>
       </div>
 
-      <div class="timeline__rail">
-        <div class="rail-node reveal"><span></span></div>
-        <div class="rail-node is-dark reveal" data-delay="1"><span></span></div>
-        <div class="rail-node reveal" data-delay="2"><span></span></div>
+      <div class="timeline__row">
+        <div class="role-title reveal" data-delay="1" data-i18n-html="exp.role1">Implementação de<br />CRM &amp; UX Design</div>
+        <div class="timeline__rail">
+          <div class="rail-node reveal" data-delay="1"><span></span></div>
+        </div>
+        <p class="focus-text reveal" data-delay="1" data-i18n="exp.focus1">Foco: Atuação estratégica no time de experiência do usuário, adaptando clientes à plataforma e criando fluxos de trabalho que aumentam a eficiência e a usabilidade do sistema.</p>
       </div>
 
-      <div class="timeline__col timeline__focus">
-        <p class="focus-text reveal" data-i18n="exp.focus1">Foco: Atuação estratégica no time de experiência do usuário, adaptando clientes à plataforma e criando fluxos de trabalho que aumentam a eficiência e a usabilidade do sistema.</p>
-        <p class="focus-text reveal" data-delay="1" data-i18n="exp.focus2">Foco: Projetos de interfaces para diversos segmentos, desde a pesquisa de usuário (UX Research) até o design visual e construção de Design Systems.</p>
-        <p class="focus-text reveal" data-delay="2" data-i18n="exp.focus3">Foco: Desenvolvimento de identidades visuais e soluções gráficas com foco em comunicação estratégica e experiência de marca.</p>
+      <div class="timeline__row">
+        <div class="role-title reveal" data-delay="2">UX/UI &amp; Digital</div>
+        <div class="timeline__rail">
+          <div class="rail-node is-dark reveal" data-delay="2"><span></span></div>
+        </div>
+        <p class="focus-text reveal" data-delay="2" data-i18n="exp.focus2">Foco: Projetos de interfaces para diversos segmentos, desde a pesquisa de usuário (UX Research) até o design visual e construção de Design Systems.</p>
+      </div>
+
+      <div class="timeline__row">
+        <div class="role-title reveal" data-delay="3" data-i18n-html="exp.role3">Designer Gráfico &amp;<br />de Interfaces</div>
+        <div class="timeline__rail">
+          <div class="rail-node reveal" data-delay="3"><span></span></div>
+        </div>
+        <p class="focus-text reveal" data-delay="3" data-i18n="exp.focus3">Foco: Desenvolvimento de identidades visuais e soluções gráficas com foco em comunicação estratégica e experiência de marca.</p>
       </div>
     </div>
   </section>
@@ -224,15 +238,6 @@
          Gerados a partir de projects-data.js com a mesma marcacao de
          buildProjects(). Ao adicionar um projeto, atualize os dois lugares. -->
     <div id="projectTrack" class="proj-grid reveal" data-delay="1">
-        <a class="project" href="projeto.html?id=ploomes" data-cursor data-cursor-label="Ver projeto" aria-label="Ploomes">
-          <div class="project__bg" style="background-image:url(assets/ploomes-cover.svg)"></div><div class="project__scrim"></div>
-          <div class="project__top"><span class="project__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div>
-          <div>
-            <h3 class="project__name">Ploomes</h3>
-            <p class="project__desc">Design de produto num CRM B2B usado por times comerciais: mapeamento dos fluxos de venda do cliente, interfaces no Figma, componentes no Design System interno e handoff com engenharia via Dev Mode.</p>
-          </div>
-        </a>
-
         <a class="project" href="projeto.html?id=itau" data-cursor data-cursor-label="Ver projeto" aria-label="Redesign de Onboarding · Itaú">
           <div class="project__bg" style="background-image:url(assets/thumb-itau.jpg)"></div><div class="project__scrim"></div>
           <div class="project__top"><span class="project__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div>
@@ -265,23 +270,6 @@
             <p class="project__desc">Projeto voltado à causa animal, com foco em criar uma experiência digital acolhedora e intuitiva para incentivar adoções, doações e conexão entre pessoas e animais resgatados.</p>
           </div>
         </a>
-
-        <a class="project" href="projeto.html?id=flui" data-cursor data-cursor-label="Ver projeto" aria-label="Flui">
-          <div class="project__bg" style="background-image:url(assets/flui-banner.svg)"></div><div class="project__scrim"></div>
-          <div class="project__top"><span class="project__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div>
-          <div>
-            <p class="project__desc">Plataforma voltada ao universo de carros elétricos: encontre postos de carregamento, avalie estações, compartilhe experiências e acesse informações úteis sobre mobilidade elétrica em um só lugar.</p>
-          </div>
-        </a>
-
-        <div class="project project--soon" aria-label="Auren — em breve">
-          <div class="project__bg" style="background-image:linear-gradient(150deg, #1F8A5B, #0E4F33)"></div>
-          <div class="project__top"><span class="project__soon-badge">Em breve</span></div>
-          <div>
-            <p class="project__cat">Controle Financeiro</p>
-            <h3 class="project__name">Auren</h3>
-          </div>
-        </div>
     </div>
 
     <div class="chips reveal">

@@ -2,34 +2,7 @@
    Dados dos projetos — compartilhado entre index e páginas de detalhe
    Edite/adicione informações de cada projeto aqui.
    ============================================================ */
-window.PROJECTS_DATA = [
-  {
-    id: "ploomes",
-    name: "Ploomes",
-    category: "Product Design · CRM SaaS B2B",
-    desc: "Design de produto num CRM B2B usado por times comerciais: mapeamento dos fluxos de venda do cliente, interfaces no Figma, componentes no Design System interno e handoff com engenharia via Dev Mode.",
-    variant: "dark",
-    cover: "assets/ploomes-cover.svg",
-    hideName: false,
-    year: "2026",
-    role: "UX Analista de Implementação · Web Designer (Customer Delivery)",
-    duration: "Janeiro de 2025 – atual",
-    tools: [
-      "Figma",
-      "Figma Dev Mode",
-      "Design System",
-      "Figma AI",
-      "Claude",
-    ],
-    context:
-      "Ploomes (Grupo Sankhya), CRM SaaS B2B. Este case descreve meu processo e meu papel no produto. Nenhum cliente, dado de conta ou configuração específica é identificado.",
-    overview:
-      "Num CRM B2B, o produto chega pronto mas nunca chega resolvido. Cada empresa que entra na plataforma vende de um jeito diferente, com etapas, aprovações e nomenclaturas próprias, e o trabalho de implementação é justamente fazer esse encontro acontecer sem que o produto vire uma colcha de retalhos. É nesse ponto que atuo: entre o time comercial do cliente, que precisa operar no dia seguinte, e o produto, que precisa continuar coerente para todos os outros.",
-    challenge:
-      "A tensão aparece sempre na mesma forma. O cliente descreve o processo dele e pede que a ferramenta se pareça com a planilha que ele já usa. Aceitar ao pé da letra gera uma configuração que funciona por um mês e quebra quando o time cresce. Recusar sem alternativa empurra o cliente de volta para a planilha. Além disso, quem opera o CRM não é quem comprou: o gestor avalia relatório, o vendedor usa a tela todo dia e abandona qualquer fluxo que custe cliques demais. Desenhar para os dois ao mesmo tempo, dentro dos limites do que a plataforma já faz, é o problema real.",
-    solution:
-      "Começo mapeando o fluxo de venda do cliente antes de abrir o Figma, separando o que é regra de negócio de verdade do que é só hábito herdado da ferramenta antiga. Com o fluxo claro, desenho as interfaces reaproveitando o Design System interno e contribuindo com componentes novos quando a necessidade se repete entre contas, para que a solução de um cliente vire padrão e não exceção. O handoff é feito pelo Dev Mode, com especificação de estados e comportamentos, e acompanho com QA visual para garantir que o que chega em produção é o que foi desenhado. Uso IA (Figma AI e Claude) para encurtar as partes mecânicas do caminho, como gerar variações de layout e organizar documentação, o que libera tempo para a parte que decide o resultado, que é entender o processo comercial por trás do pedido.",
-  },
+window.PROJECTS_DATA = [
   {
     id: "itau",
     name: "Redesign de Onboarding · Itaú",
@@ -165,48 +138,7 @@ window.PROJECTS_DATA = [
       { num: "9/10", label: "nota média de satisfação no protótipo" },
     ],
     gallery: ["assets/service-1.png"],
-  },
-  {
-    id: "flui",
-    name: "Flui",
-    category: "UX/UI · Mobilidade Elétrica",
-    desc: "Plataforma voltada ao universo de carros elétricos: encontre postos de carregamento, avalie estações, compartilhe experiências e acesse informações úteis sobre mobilidade elétrica em um só lugar.",
-    variant: "dark",
-    cover: "assets/flui-banner.svg",
-    hideName: true,
-    year: "2026",
-    role: "UX/UI Designer",
-    duration: "Projeto em equipe",
-    tools: ["Figma", "Maps API", "Maze"],
-    link: "https://flui-charge.vercel.app/",
-    linkLabel: "Acessar protótipo",
-    team: [
-      { name: "Hannya", role: "UX/UI Designer", link: "https://www.linkedin.com/in/hannyacavalcante/" },
-      { name: "Gabriel", role: "UX e UI", link: "https://www.linkedin.com/in/oliveiragab/" },
-      { name: "Mari", role: "Marketing, UX", link: "https://www.linkedin.com/in/mariana-nikaido/" },
-    ],
-    overview:
-      "Flui reúne tudo que um motorista de carro elétrico precisa: localização de estações em tempo real, avaliações da comunidade e informações úteis sobre rotas e mobilidade elétrica.",
-    challenge:
-      "Informações sobre carregamento são dispersas e pouco confiáveis. Motoristas precisam decidir rápido onde e quando carregar, muitas vezes em movimento.",
-    solution:
-      "Mapa em tempo real com status de disponibilidade, filtros por tipo de conector e velocidade, avaliações da comunidade e planejamento de rota. Interface escura e de alto contraste, pensada para uso no carro.",
-    results: [
-      { num: "tempo real", label: "status de disponibilidade das estações" },
-      { num: "-25%", label: "tempo para encontrar um posto" },
-      { num: "7/10", label: "confiança nas informações da comunidade" },
-    ],
-    gallery: [],
-  },
-  {
-    id: "auren",
-    name: "Auren",
-    category: "Controle Financeiro",
-    desc: "Projeto em desenvolvimento — em breve mais informações.",
-    variant: "green",
-    soon: true,
-    year: "2026",
-  },
+  },
 ];
 
 window.VARIANT_BG = {
