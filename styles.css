@@ -575,6 +575,38 @@ section { position: relative; }
   align-items: start;
   padding-bottom: clamp(44px, 6vw, 88px);
 }
+/* Cargo: titulo + empresa e periodo logo abaixo */
+.role-company {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: clamp(13px, 1.1vw, 15px);
+  color: var(--text-600);
+}
+.role-sep { color: var(--primary); }
+/* Capacidades do cargo, no lugar de descrever tudo em prosa */
+.role-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+.role-tag {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1;
+  color: var(--primary-strong);
+  background: color-mix(in srgb, var(--primary) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--primary) 24%, transparent);
+  border-radius: 999px;
+  padding: 8px 12px;
+  white-space: nowrap;
+}
 .timeline__row:last-child { padding-bottom: 0; }
 .role-title {
   font-family: var(--font-body);
@@ -739,7 +771,42 @@ section { position: relative; }
 .project--light .project__name { color: var(--project-purple); }
 .project--light .project__desc { color: var(--text-600); }
 .project--light .project__arrow { background: transparent; border: 1px solid var(--project-purple); color: var(--project-purple); }
-.project__top { display: flex; justify-content: flex-end; }
+/* Topo do card: etiquetas a esquerda, seta a direita */
+.project__top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.project__pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.project__pill {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-900);
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 999px;
+  padding: 6px 12px;
+  white-space: nowrap;
+}
+/* Em andamento: pilula roxa com ponto pulsando, para o case nao se passar
+   por concluido nem ficar escondido */
+.project__pill--wip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  background: var(--primary-strong);
+}
+.project__pill--wip::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  animation: wipPulse 1.8s ease-in-out infinite;
+}
+@keyframes wipPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+@media (prefers-reduced-motion: reduce) {
+  .project__pill--wip::before { animation: none; }
+}
 .project__arrow {
   width: 56px;
   height: 56px;
@@ -1462,8 +1529,8 @@ html.has-fcursor * { cursor: none !important; }
     gap: 4px 16px;
     padding-bottom: 32px;
   }
-  .timeline__row .role-title { grid-column: 2; grid-row: 1; }
-  .timeline__row .focus-text { grid-column: 2; grid-row: 2; }
+  .timeline__row .role-head { grid-column: 2; grid-row: 1; }
+  .timeline__row .role-body { grid-column: 2; grid-row: 2; }
   .timeline__rail {
     grid-column: 1;
     grid-row: 1 / 3;

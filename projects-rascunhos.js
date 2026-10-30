@@ -11,34 +11,7 @@
    As imagens de capa seguem em assets/, intactas.
    ============================================================ */
 window.PROJECTS_RASCUNHOS = [
-  {
-    id: "ploomes",
-    name: "Notificações Ploomes (Case)",
-    category: "Product Design · Discovery",
-    desc: "Discovery sobre a aba de Notificações e Tarefas de um CRM B2B. Começou nas notificações e chegou às tarefas: a confiança no aviso é o que sustenta a confiança na tarefa. Estudo em andamento.",
-    variant: "dark",
-    cover: "assets/ploomes-cover.svg",
-    hideName: false,
-    year: "2026",
-    role: "Discovery conduzido por mim, em mentoria de Product Design",
-    duration: "Outubro de 2026 – em andamento",
-    tools: [
-      "Figma",
-      "Double Diamond",
-      "O Teste da Mãe",
-      "Entrevistas",
-      "Benchmark",
-      "IA",
-    ],
-    context:
-      "Ploomes (Grupo Sankhya), CRM SaaS B2B. Case sobre um problema real do produto, identificado no uso cotidiano da plataforma, e não um exercício hipotético. Conduzido dentro de uma mentoria de Product Design, com o Double Diamond guiando as fases. Está em andamento: a fase de descoberta terminou, a de ideação não. Nenhum cliente, dado de conta ou pessoa entrevistada é identificado.",
-    overview:
-      "Notificação é uma promessa: isto aqui merece sua atenção agora. Quando o produto quebra essa promessa algumas vezes, a pessoa para de olhar, e a partir daí o aviso vira ruído mesmo quando está certo. Comecei este estudo pela aba de Notificações, mas os insumos mostraram que o problema não para ali: ele chega às Tarefas, porque é a confiança no aviso que sustenta a confiança na tarefa. Quem não acredita no sino também não acredita na lista.",
-      challenge:
-      "Hoje todo aviso chega do mesmo jeito, seja ele crítico, sensível ao tempo ou apenas informativo, e cabe à pessoa fazer essa triagem sozinha, várias vezes por dia. Isso pesa diferente para cada perfil: quem gerencia projeto, quem atende suporte, quem cuida de arquitetura de CPQ e quem opera logs de integração não precisam das mesmas coisas nem no mesmo momento. As entrevistas trouxeram sintomas concretos, como status de tarefa que não batia com a realidade e gente migrando a própria rotina para o Google Calendar. Quando alguém leva o trabalho para fora da ferramenta, a ferramenta já perdeu. O desafio não é notificar mais, é separar o que merece interromper do que pode esperar.",
-    solution:
-      "A descoberta foi feita com entrevistas seguindo O Teste da Mãe, com pessoas de suporte, arquitetura de CPQ e gerência de projetos. O roteiro busca fato sobre o comportamento passado, não opinião sobre funcionalidade futura, justamente para não colher elogio educado. Em paralelo, montei um benchmark de CRMs e do iOS documentado no Figma, com print e anotação, para servir de referência ao time. A primeira versão de alta fidelidade cobriu painel do sino, preferências, alerta e as visões de dia, mês e lista. A mentoria redirecionou o caminho a partir dali: voltar para wireframe de baixa fidelidade com várias opções por tela antes de fechar qualquer visual, divergir mais antes de convergir, e quantificar cada dor por quantas pessoas citaram e de qual perfil, em vez de tratar todo relato com o mesmo peso. É onde o estudo está agora. As próximas frentes são classificar todos os tipos de notificação que existem no sistema entre crítica, sensível ao tempo e passiva, e fechar as métricas que vão dizer se a solução funcionou: tempo até abrir a notificação, engajamento, menções no suporte e NPS.",
-  },
+
 
   {
     id: "flui",

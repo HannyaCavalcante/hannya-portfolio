@@ -53,7 +53,14 @@
       return (
         '<a class="' + cls + '" href="projeto.html?id=' + p.id + '" data-cursor data-cursor-label="Ver projeto" aria-label="' + p.name + '">' +
         bg +
-        '<div class="project__top"><span class="project__arrow">' + arrowSvg + "</span></div>" +
+        '<div class="project__top">' +
+        (p.tag || p.wip
+          ? '<div class="project__pills">' +
+            (p.tag ? '<span class="project__pill">' + p.tag + "</span>" : "") +
+            (p.wip ? '<span class="project__pill project__pill--wip">Em andamento</span>' : "") +
+            "</div>"
+          : "") +
+        '<span class="project__arrow">' + arrowSvg + "</span></div>" +
         '<div>' +
         (p.logo ? '<img class="project__logo" src="' + p.logo + '" alt="' + p.name + '" />' : (p.hideName ? "" : '<h3 class="project__name">' + p.name + "</h3>")) +
         '<p class="project__desc">' + p.desc + "</p></div>" +
